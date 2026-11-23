@@ -1,0 +1,2747 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110e">
+  <meta name="description"
+    content="Portfólio de Felipe Lucas Ruediger Lima — desenvolvimento de software, produto digital e interfaces.">
+  <title>Felipe Lucas Ruediger Lima — Portfólio</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Devicon: SVGs oficiais/comunitários das tecnologias -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html:not([data-theme]) body {
+      margin: 0;
+      background: #10110e;
+      color: #f4f2e9;
+      font-family: system-ui, sans-serif
+    }
+
+    html:not([data-theme]) .section-space {
+      padding: 90px 0
+    }
+
+    html:not([data-theme]) .accent {
+      color: #d9ff52
+    }
+
+    html:not([data-theme]) .eyebrow {
+      font: .76rem ui-monospace, monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #d9ff52
+    }
+
+    html:not([data-theme]) .section-title {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -.06em;
+      line-height: 1
+    }
+
+    html:not([data-theme]) .section-intro {
+      color: #a5a89a;
+      line-height: 1.8
+    }
+
+    html:not([data-theme]) .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      margin: 3px 4px 0 0;
+      border: 1px solid rgba(244, 242, 233, .13);
+      border-radius: 99px;
+      color: #a5a89a;
+      font: .67rem ui-monospace, monospace
+    }
+
+    html:not([data-theme]) .project-link {
+      color: #d9ff52;
+      font-weight: 800;
+      font-size: .85rem
+    }
+
+    html:not([data-theme]) a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    :root {
+      color-scheme: dark;
+      --bg: #10110e;
+      --surface: #171914;
+      --surface-2: #1d2019;
+      --ink: #f4f2e9;
+      --muted: #a5a89a;
+      --line: rgba(244, 242, 233, .13);
+      --accent: #d9ff52;
+      --accent-2: #b9e83c;
+      --mono: "DM Mono", monospace;
+      --sans: "Manrope", system-ui, sans-serif;
+      --radius: 22px;
+    }
+
+    [data-theme="light"] {
+      color-scheme: light;
+      --bg: #f4f3ed;
+      --surface: #ffffff;
+      --surface-2: #eceee5;
+      --ink: #171914;
+      --muted: #656b5c;
+      --line: rgba(23, 25, 20, .14);
+      --accent: #6f9411;
+      --accent-2: #58770a;
+    }
+
+    [data-theme="light"] body {
+      background: radial-gradient(ellipse at 82% 3%, rgba(111, 148, 17, .10), transparent 28rem), var(--bg);
+    }
+
+    [data-theme="light"] body::before {
+      opacity: .07;
+    }
+
+    [data-theme="light"] .site-nav {
+      background: rgba(244, 243, 237, .84);
+    }
+
+    [data-theme="light"] .brand-mark {
+      color: #171914 !important;
+    }
+
+    [data-theme="dark"] .brand-mark {
+      color: #f4f2e9 !important;
+    }
+
+    [data-theme="light"] .hero h1 .outline {
+      -webkit-text-stroke-color: rgba(23, 25, 20, .58);
+    }
+
+    [data-theme="light"] .hero-grid {
+      background-image: linear-gradient(rgba(23, 25, 20, .055) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 25, 20, .055) 1px, transparent 1px);
+    }
+
+    [data-theme="light"] .stack-tile,
+    [data-theme="light"] .about-card {
+      background-color: rgba(23, 25, 20, .025);
+    }
+
+    [data-theme="light"] .project-visual {
+      background: radial-gradient(circle at 70% 30%, rgba(111, 148, 17, .18), transparent 35%), linear-gradient(135deg, #e8ebdc, #dfe3d2);
+    }
+
+    [data-theme="light"] .contact-box {
+      background: radial-gradient(ellipse at 100% 0%, rgba(111, 148, 17, .13), transparent 45%), #fff;
+    }
+
+    [data-theme="light"] .navbar-toggler-icon {
+      filter: invert(.8);
+    }
+
+    [data-theme="light"] .btn-accent {
+      color: #fff;
+      background: #171914;
+      border-color: #171914;
+    }
+
+    [data-theme="light"] .btn-accent:hover {
+      color: #fff;
+      background: #34382c;
+    }
+
+    [data-theme="light"] .hero-stamp {
+      border-color: rgba(111, 148, 17, .5);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 82% 3%, rgba(217, 255, 82, .09), transparent 28rem),
+        var(--bg);
+      font-family: var(--sans);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .14;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 1120px;
+    }
+
+    .mono,
+    .eyebrow,
+    .nav-link,
+    .project-meta,
+    .stack-label {
+      font-family: var(--mono);
+    }
+
+    .text-muted-custom {
+      color: var(--muted) !important;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .section-space {
+      padding: 112px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      font-size: .76rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -.065em;
+      line-height: .98;
+    }
+
+    .section-intro {
+      max-width: 620px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    /* Navegação */
+    .site-nav {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(16, 17, 14, .76);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid transparent;
+      transition: .3s ease;
+    }
+
+    .site-nav.scrolled {
+      border-color: var(--line);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+    }
+
+    .brand-mark {
+      font-weight: 800;
+      letter-spacing: -.07em;
+      font-size: 1.15rem;
+    }
+
+    .brand-mark span {
+      color: var(--accent);
+    }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: .75rem;
+      letter-spacing: .04em;
+      padding: .6rem .8rem !important;
+      transition: color .2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: var(--accent);
+    }
+
+    .navbar-toggler {
+      border-color: var(--line);
+      box-shadow: none !important;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    .theme-toggle {
+      width: 42px;
+      height: 42px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--ink);
+      transition: .25s ease;
+    }
+
+    .theme-toggle:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      transform: rotate(12deg);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 790px;
+      padding: 170px 0 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 90px 0 0;
+      pointer-events: none;
+      opacity: .24;
+      background-image: linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    .hero-kicker {
+      color: var(--muted);
+      font: .8rem var(--mono);
+      margin-bottom: 28px;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 8px;
+      box-shadow: 0 0 14px var(--accent);
+      animation: pulse 1.8s ease-in-out infinite;
+    }
+
+    .hero h1 {
+      max-width: 920px;
+      font-size: clamp(3.5rem, 9.5vw, 8.4rem);
+      font-weight: 800;
+      letter-spacing: -.09em;
+      line-height: .88;
+      margin: 0 0 32px;
+    }
+
+    .hero h1 .outline {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(244, 242, 233, .65);
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .btn-accent {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: var(--accent);
+      color: #171914;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      font-weight: 800;
+      transition: .25s ease;
+    }
+
+    .btn-accent:hover {
+      color: #171914;
+      background: #efffae;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(217, 255, 82, .16);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      transition: .25s ease;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .hero-stamp {
+      position: absolute;
+      right: 7%;
+      bottom: 15%;
+      width: 126px;
+      height: 126px;
+      border: 1px solid rgba(217, 255, 82, .4);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      font: .7rem var(--mono);
+      text-align: center;
+      transform: rotate(-13deg);
+      animation: slowSpin 24s linear infinite;
+    }
+
+    .hero-stamp i {
+      font-size: 1.6rem;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* Faixa infinita */
+    .marquee-wrap {
+      overflow: hidden;
+      border-block: 1px solid var(--line);
+      background: rgba(255, 255, 255, .018);
+      padding: 20px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      align-items: center;
+      gap: 38px;
+      animation: marquee 36s linear infinite;
+    }
+
+    .marquee-wrap:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      flex-shrink: 0;
+    }
+
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+      color: var(--muted);
+      font: .78rem var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .marquee-item i {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    /* Sobre */
+    .about-card {
+      height: 100%;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(255, 255, 255, .045), rgba(255, 255, 255, .012));
+    }
+
+    .about-card .big-number {
+      color: var(--accent);
+      font: 2.5rem var(--mono);
+    }
+
+    .about-card p {
+      color: var(--muted);
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .principle {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .principle:last-child {
+      border-bottom: 0;
+    }
+
+    .principle i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+
+    .principle strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .principle span {
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.6;
+    }
+
+    /* Stacks */
+    .stack-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 28px;
+      height: 100%;
+    }
+
+    .stack-panel h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stack-tile {
+      min-height: 108px;
+      padding: 14px 8px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, .075);
+      background: rgba(255, 255, 255, .025);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      text-align: center;
+      transition: transform .3s cubic-bezier(.2, .8, .2, 1), border-color .3s, background .3s;
+    }
+
+    .stack-tile:hover {
+      transform: translateY(-7px) scale(1.025);
+      border-color: rgba(217, 255, 82, .55);
+      background: rgba(217, 255, 82, .055);
+    }
+
+    .stack-tile i {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .stack-tile img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    /* Classe reutilizável para imagens personalizadas no mesmo padrão proporcional */
+    .custom-icon-img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .stack-label {
+      color: var(--muted);
+      font-size: .68rem;
+    }
+
+    .stack-note {
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.7;
+      margin-top: 18px;
+    }
+
+    /* Experiência e projetos */
+    .timeline {
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 46px 42px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .project-card {
+      height: 100%;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      transition: transform .35s ease, border-color .35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(217, 255, 82, .5);
+    }
+
+    .project-visual {
+      min-height: 205px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 70% 30%, rgba(217, 255, 82, .18), transparent 35%),
+        linear-gradient(135deg, #25291e, #141610);
+    }
+
+    .project-visual::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border: 1px solid rgba(217, 255, 82, .22);
+      border-radius: 50%;
+      transform: translate(35%, 28%);
+    }
+
+    .project-symbol {
+      font-size: 4.5rem;
+      color: var(--accent);
+      z-index: 1;
+      transition: transform .4s ease;
+    }
+
+    .project-card:hover .project-symbol {
+      transform: scale(1.13) rotate(-8deg);
+    }
+
+    .project-body {
+      padding: 26px;
+    }
+
+    .project-meta {
+      color: var(--accent);
+      font-size: .7rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .project-body h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 10px 0;
+    }
+
+    .project-body p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: .92rem;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 6px 10px;
+      margin: 3px 4px 0 0;
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      color: var(--muted);
+      font: .67rem var(--mono);
+    }
+
+    .project-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--accent);
+      font-size: .85rem;
+      font-weight: 800;
+      margin-top: 16px;
+    }
+
+    /* Estante de leitura e Livros (Clean & Compacto) */
+    .book-card {
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      transition: transform .3s ease, border-color .3s ease;
+      cursor: pointer;
+    }
+
+    .book-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(217, 255, 82, .5);
+    }
+
+    .book-cover {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      background: var(--surface-2);
+    }
+
+    .book-cover-placeholder {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 70% 20%, rgba(217, 255, 82, .16), transparent 40%), var(--surface-2);
+    }
+
+    .book-placeholder-icon {
+      font-size: 1.7rem;
+      color: var(--accent);
+    }
+
+    .book-body {
+      padding: 16px;
+    }
+
+    .book-body h3 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin: 6px 0 3px;
+    }
+
+    .book-body p {
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .book-rating {
+      color: var(--accent);
+      font: .68rem var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    /* Estilização das abas de categorias de livros */
+    .book-tabs {
+      display: inline-flex;
+      gap: 8px;
+      padding: 4px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      margin-bottom: 36px;
+    }
+
+    .book-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font: .75rem var(--mono);
+      padding: 8px 18px;
+      border-radius: 999px;
+      transition: all .25s ease;
+      cursor: pointer;
+    }
+
+    .book-tab-btn:hover {
+      color: var(--ink);
+    }
+
+    .book-tab-btn.active {
+      background: var(--accent);
+      color: #171914;
+      font-weight: 600;
+    }
+
+    .book-category-pane {
+      display: none;
+      animation: fadeIn .4s ease;
+    }
+
+    .book-category-pane.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Modal customizado de leitura com fundo desfocado */
+    .modal-backdrop.show {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background-color: rgba(16, 17, 14, 0.7);
+      opacity: 1;
+    }
+
+    .modal-content {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--ink);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-header {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 24px;
+    }
+
+    .modal-footer {
+      border-top: 1px solid var(--line);
+      padding: 16px 24px;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+
+    [data-theme="light"] .btn-close {
+      filter: none;
+    }
+
+    /* Formação / contato */
+    .education-line {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .education-line:last-child {
+      border-bottom: 0;
+    }
+
+    .education-line small {
+      color: var(--accent);
+      font: .72rem var(--mono);
+    }
+
+    .education-line h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 7px 0;
+    }
+
+    .education-line p {
+      color: var(--muted);
+      margin: 0;
+      font-size: .9rem;
+    }
+
+    .contact-box {
+      padding: clamp(28px, 6vw, 64px);
+      border: 1px solid rgba(217, 255, 82, .35);
+      border-radius: 28px;
+      background: radial-gradient(ellipse at 100% 0%, rgba(217, 255, 82, .12), transparent 45%), var(--surface);
+    }
+
+    .contact-box h2 {
+      max-width: 760px;
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      font-weight: 800;
+      letter-spacing: -.075em;
+      line-height: .95;
+    }
+
+    .contact-detail {
+      color: var(--muted);
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin: 8px 22px 0 0;
+    }
+
+    .contact-detail i {
+      color: var(--accent);
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font: .72rem var(--mono);
+    }
+
+    /* Animações de entrada */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s ease, transform .8s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 {
+      transition-delay: .12s;
+    }
+
+    .delay-2 {
+      transition-delay: .22s;
+    }
+
+    .delay-3 {
+      transition-delay: .32s;
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .45;
+        transform: scale(.8);
+      }
+    }
+
+    @keyframes slowSpin {
+      to {
+        transform: rotate(347deg);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .hero {
+        min-height: auto;
+        padding: 150px 0 100px;
+      }
+
+      .hero-stamp {
+        right: 5%;
+        bottom: 6%;
+        width: 96px;
+        height: 96px;
+        font-size: .58rem;
+      }
+
+      .section-space {
+        padding: 84px 0;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero {
+        padding: 132px 0 78px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.25rem, 17vw, 5.3rem);
+      }
+
+      .hero-stamp {
+        display: none;
+      }
+
+      .stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stack-panel {
+        padding: 20px;
+      }
+
+      .section-space {
+        padding: 72px 0;
+      }
+
+      .about-card {
+        padding: 24px;
+      }
+
+      .marquee-track,
+      .marquee-group {
+        gap: 24px;
+      }
+
+      .marquee-wrap {
+        padding: 16px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg site-nav" id="siteNav" aria-label="Navegação principal">
+    <div class="container nav-inner">
+      <a class="navbar-brand brand-mark" href="#inicio" aria-label="Felipe Ruediger, início">FL<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <div class="navbar-nav align-items-lg-center">
+          <a class="nav-link" href="#sobre">SOBRE</a>
+          <a class="nav-link" href="#stack">STACK</a>
+          <a class="nav-link" href="#ai">IAs</a>
+          <a class="nav-link" href="#experiencia">EXPERIÊNCIA</a>
+          <a class="nav-link" href="#projetos">PROJETOS</a>
+          <a class="nav-link" href="#livros">LIVROS</a>
+          <a class="nav-link" href="#cases">CASES</a>
+          <a class="nav-link" href="#contato">CONTATO</a>
+        </div>
+        <button class="theme-toggle ms-lg-3 mt-3 mt-lg-0" id="themeToggle" type="button" aria-label="Ativar tema claro"
+          title="Alternar tema">
+          <i class="bi bi-sun-fill" id="themeIcon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid"></div>
+      <div class="container position-relative">
+        <div class="hero-kicker reveal"><span class="status-dot"></span> DESENVOLVIMENTO • PRODUTO • EXPERIÊNCIA DIGITAL
+        </div>
+        <h1 class="reveal delay-1">Felipe Lucas<br><span class="outline">Ruediger Lima.</span></h1>
+        <p class="hero-copy reveal delay-2">
+          Desenvolvedor em formação, movido por tecnologia e curiosidade. Transito entre código, dados e experiência do
+          usuário para transformar problemas reais em soluções digitais.
+        </p>
+        <div class="hero-actions reveal delay-3">
+          <a class="btn-accent" href="#projetos">Conheça meus projetos <i class="bi bi-arrow-down-right"></i></a>
+          <a class="btn-ghost" href="mailto:flruedigerlima@gmail.com"><i class="bi bi-envelope"></i> Vamos conversar</a>
+        </div>
+      </div>
+      <div class="hero-stamp">
+        <div><i class="bi bi-code-slash"></i>IDEIAS EM<br>CONSTRUÇÃO</div>
+      </div>
+    </section>
+
+    <!-- Faixa infinita: tecnologias e áreas de atuação -->
+    <div class="marquee-wrap" aria-label="Tecnologias e áreas de atuação">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span class="marquee-item"><i class="devicon-csharp-plain"></i>C# / .NET</span>
+          <span class="marquee-item"><i class="devicon-javascript-plain"></i>JavaScript</span>
+          <span class="marquee-item"><i class="devicon-sqlite-plain"></i>SQL & DADOS</span>
+          <span class="marquee-item"><i class="devicon-nodejs-plain"></i>Node.js</span>
+          <span class="marquee-item"><i class="devicon-html5-plain"></i>HTML & CSS</span>
+          <span class="marquee-item"><i class="devicon-git-plain"></i>Git / GitHub</span>
+          <span class="marquee-item"><i class="bi bi-diagram-3"></i>INTEGRAÇÕES</span>
+          <span class="marquee-item"><i class="bi bi-window"></i>UX / UI</span>
+          <span class="marquee-item"><i class="bi bi-lightbulb"></i>PRODUTO DIGITAL</span>
+        </div>
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-item"><i class="devicon-csharp-plain"></i>C# / .NET</span>
+          <span class="marquee-item"><i class="devicon-javascript-plain"></i>JavaScript</span>
+          <span class="marquee-item"><i class="devicon-sqlite-plain"></i>SQL & DADOS</span>
+          <span class="marquee-item"><i class="devicon-nodejs-plain"></i>Node.js</span>
+          <span class="marquee-item"><i class="devicon-html5-plain"></i>HTML & CSS</span>
+          <span class="marquee-item"><i class="devicon-git-plain"></i>Git / GitHub</span>
+          <span class="marquee-item"><i class="bi bi-diagram-3"></i>INTEGRAÇÕES</span>
+          <span class="marquee-item"><i class="bi bi-window"></i>UX / UI</span>
+          <span class="marquee-item"><i class="bi bi-lightbulb"></i>PRODUTO DIGITAL</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-space" id="sobre">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5 reveal">
+            <span class="eyebrow">01 / SOBRE MIM</span>
+            <h2 class="section-title mt-4">Código com<br><span class="accent">contexto.</span></h2>
+          </div>
+          <div class="col-lg-7 reveal delay-1">
+            <p class="section-intro mb-4">
+              Sou estudante de Técnico em Informática pelo IFSP e atuo como estagiário de desenvolvimento na Concilig.
+              Gosto de entender o problema antes de partir para a implementação — seja investigando uma regra de
+              negócio, organizando dados ou pensando em como uma pessoa vai usar o que foi construído.
+            </p>
+            <p class="section-intro">
+              Minha trajetória também passa por empreendedorismo, comunicação e design de interfaces. Como fundador do
+              Brassinatura, desenvolvi uma visão de produto que conecta tecnologia, conteúdo, identidade e experiência.
+              É nessa interseção que encontro meu jeito de trabalhar.
+            </p>
+          </div>
+        </div>
+        <div class="row g-3 mt-4">
+          <div class="col-md-4 reveal">
+            <div class="about-card">
+              <div class="big-number">01</div>
+              <h3 class="h5 fw-bold mt-3">Visão de produto</h3>
+              <p>Olhar para além da tarefa: entender o objetivo, o usuário e o impacto da solução.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal delay-1">
+            <div class="about-card">
+              <div class="big-number">02</div>
+              <h3 class="h5 fw-bold mt-3">Investigação técnica</h3>
+              <p>Debugging, análise de dados e busca por causas — não apenas contornos rápidos.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal delay-2">
+            <div class="about-card">
+              <div class="big-number">03</div>
+              <h3 class="h5 fw-bold mt-3">Comunicação</h3>
+              <p>Traduzir assuntos técnicos, documentar processos e colaborar com diferentes áreas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space" id="stack">
+      <div class="container">
+        <div class="row align-items-end mb-5 g-3">
+          <div class="col-lg-7 reveal">
+            <span class="eyebrow">02 / FERRAMENTAS</span>
+            <h2 class="section-title mt-4">Minha caixa<br>de <span class="accent">ferramentas.</span></h2>
+          </div>
+          <div class="col-lg-5 reveal delay-1">
+            <p class="section-intro mb-0">Tecnologias com as quais já tive contato em projetos, estudos e experiências
+              profissionais. A profundidade varia conforme a ferramenta — prefiro mostrar o que realmente faz parte da
+              minha prática.</p>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-6 reveal">
+            <div class="stack-panel">
+              <h3><span class="accent mono me-2">01.</span> Desenvolvimento</h3>
+              <div class="stack-grid">
+                <div class="stack-tile"><i class="devicon-csharp-plain colored"></i><span class="stack-label">C#</span>
+                </div>
+                <div class="stack-tile"><i class="devicon-dotnetcore-plain colored"></i><span
+                    class="stack-label">.NET</span></div>
+                <div class="stack-tile"><i class="devicon-javascript-plain colored"></i><span
+                    class="stack-label">JavaScript</span></div>
+                <div class="stack-tile"><i class="devicon-nodejs-plain colored"></i><span
+                    class="stack-label">Node.js</span></div>
+                <div class="stack-tile"><i class="devicon-express-original"></i><span class="stack-label">Express</span>
+                </div>
+                <div class="stack-tile"><i class="devicon-html5-plain colored"></i><span
+                    class="stack-label">HTML5</span></div>
+                <div class="stack-tile"><i class="devicon-css3-plain colored"></i><span class="stack-label">CSS3</span>
+                </div>
+                <div class="stack-tile"><i class="devicon-c-plain colored"></i><span class="stack-label">C</span></div>
+                <div class="stack-tile"><i class="devicon-python-plain colored"></i><span
+                    class="stack-label">Python</span></div>
+              </div>
+              <p class="stack-note">C, Python e Java também fazem parte da minha formação e prática de estudos.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal delay-1">
+            <div class="stack-panel">
+              <h3><span class="accent mono me-2">02.</span> Dados, ferramentas & produto</h3>
+              <div class="stack-grid">
+                <div class="stack-tile"><i class="devicon-microsoftsqlserver-plain colored"></i><span
+                    class="stack-label">SQL Server</span></div>
+                <div class="stack-tile"><i class="devicon-mysql-plain colored"></i><span
+                    class="stack-label">MySQL</span></div>
+                <div class="stack-tile"><i class="devicon-git-plain colored"></i><span class="stack-label">Git</span>
+                </div>
+                <div class="stack-tile"><i class="devicon-github-original"></i><span class="stack-label">GitHub</span>
+                </div>
+                <div class="stack-tile"><i class="devicon-figma-plain colored"></i><span
+                    class="stack-label">Figma</span></div>
+                <div class="stack-tile"><i class="bi bi-diagram-3"></i><span class="stack-label">APIs REST</span></div>
+                <div class="stack-tile"><i class="bi bi-kanban"></i><span class="stack-label">Jira</span></div>
+
+                <!-- TOTVS Fluig com imagem PNG personalizada e classe .custom-icon-img -->
+                <div class="stack-tile">
+                  <img src="assets/fluig.png" alt="TOTVS Fluig" class="custom-icon-img">
+                  <span class="stack-label">TOTVS Fluig</span>
+                </div>
+
+                <div class="stack-tile"><i class="bi bi-filetype-csv"></i><span class="stack-label">CSV / Dados</span>
+                </div>
+              </div>
+              <p class="stack-note">Também tive contato com PHP, Protheus, documentação técnica, dashboards e fluxos de
+                automação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nova Seção: Inteligência Artificial (IAs Usadas) -->
+    <section class="section-space" id="ai">
+      <div class="container">
+        <div class="row align-items-end mb-5 g-3">
+          <div class="col-lg-7 reveal">
+            <span class="eyebrow">03 / INTELIGÊNCIA ARTIFICIAL</span>
+            <h2 class="section-title mt-4">IAs que potencializam<br>meu <span class="accent">fluxo.</span></h2>
+          </div>
+          <div class="col-lg-5 reveal delay-1">
+            <p class="section-intro mb-0">Ferramentas de IA integradas no dia a dia para desenvolvimento de código,
+              suporte a engenharia, lógica e criação de assets visuais.</p>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <!-- Bloco 1: Assistentes de Código e Lógica -->
+          <div class="col-lg-6 reveal">
+            <div class="stack-panel">
+              <h3><span class="accent mono me-2">01.</span> Código & Assistência</h3>
+              <div class="stack-grid">
+                <!-- Claude Code -->
+                <div class="stack-tile">
+                  <img src="assets/claudeCode.png" alt="Claude Code" class="custom-icon-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                  <i class="bi bi-cpu fs-3 text-muted" style="display:none;"></i>
+                  <span class="stack-label">Claude Code</span>
+                </div>
+                <!-- Codex -->
+                <div class="stack-tile">
+                  <img src="assets/codex.png" alt="Codex" class="custom-icon-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                  <i class="bi bi-code-square fs-3 text-muted" style="display:none;"></i>
+                  <span class="stack-label">Codex</span>
+                </div>
+                <!-- Gemini -->
+                <div class="stack-tile">
+                  <img src="assets/Gemini.png" alt="Gemini" class="custom-icon-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                  <i class="bi bi-stars fs-3 text-muted" style="display:none;"></i>
+                  <span class="stack-label">Gemini</span>
+                </div>
+              </div>
+              <p class="stack-note">Apoio em arquitetura, refatoração de código, debugging e estruturação de projetos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bloco 2: Geração de Imagens & Design -->
+          <div class="col-lg-6 reveal delay-1">
+            <div class="stack-panel">
+              <h3><span class="accent mono me-2">02.</span> Geração de Imagens & Design</h3>
+              <div class="stack-grid">
+                <!-- GPT Image 2.6 -->
+                <div class="stack-tile">
+                  <img src="assets/ChatLogo.png" alt="GPT Image 2.6" class="custom-icon-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                  <i class="bi bi-palette fs-3 text-muted" style="display:none;"></i>
+                  <span class="stack-label">GPT Image 2.6</span>
+                </div>
+                <!-- Nano Banana 2 -->
+                <div class="stack-tile">
+                  <img src="assets/nanoBanana2.png" alt="Nano Banana 2" class="custom-icon-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                  <i class="bi bi-brush fs-3 text-muted" style="display:none;"></i>
+                  <span class="stack-label">Nano Banana 2</span>
+                </div>
+              </div>
+              <p class="stack-note">Criação de elementos visuais, identidade gráfica e prototipagem estética para marcas
+                e interfaces.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space" id="experiencia">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5 reveal">
+            <span class="eyebrow">04 / TRAJETÓRIA</span>
+            <h2 class="section-title mt-4">Experiência que<br><span class="accent">vira repertório.</span></h2>
+            <p class="section-intro mt-4">Cada contexto me ensinou uma parte diferente do desenvolvimento: investigar,
+              construir, comunicar e pensar na experiência completa.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="timeline">
+              <article class="timeline-item reveal">
+                <div class="project-meta">2026 — atual · Concilig</div>
+                <h3 class="h4 fw-bold mt-2">Estagiário de Desenvolvimento</h3>
+                <p class="text-muted-custom mb-3">Atuação na manutenção e investigação de aplicações corporativas,
+                  análise de regras de negócio, debugging e evolução de fluxos de dados. Contato com C#/.NET, SQL
+                  Server, processamento de arquivos, logs e organização em camadas como Repository, Service e DTO.</p>
+                <span class="chip">C# / .NET</span><span class="chip">SQL Server</span><span
+                  class="chip">Debugging</span><span class="chip">Integração de dados</span>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="project-meta">2023 — 2025 · Brassinatura</div>
+                <h3 class="h4 fw-bold mt-2">Fundador & Desenvolvedor de Produto</h3>
+                <p class="text-muted-custom mb-3">Concepção de um hub vocacional gratuito, da proposta de valor à
+                  identidade visual e ao desenvolvimento web. Planejamento de funcionalidades, conteúdo, experiência do
+                  usuário e integração com Google Calendar para organização de eventos.</p>
+                <span class="chip">JavaScript</span><span class="chip">UX / UI</span><span class="chip">Produto
+                  digital</span><span class="chip">Empreendedorismo</span>
+              </article>
+              <article class="timeline-item reveal">
+                <div class="project-meta">2024 · Listo Tecnologia</div>
+                <h3 class="h4 fw-bold mt-2">Desenvolvedor de Interface — Freelancer</h3>
+                <p class="text-muted-custom mb-3">Redesign de manuais técnicos e documentações corporativas, com foco em
+                  hierarquia visual, clareza da informação e organização estrutural de conteúdos.</p>
+                <span class="chip">Design de informação</span><span class="chip">Documentação</span><span
+                  class="chip">Usabilidade</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space" id="projetos">
+      <div class="container">
+        <div class="row align-items-end mb-5 g-3">
+          <div class="col-lg-7 reveal">
+            <span class="eyebrow">05 / EM DESTAQUE</span>
+            <h2 class="section-title mt-4">Ideias que saíram<br><span class="accent">do papel.</span></h2>
+          </div>
+          <div class="col-lg-5 reveal delay-1">
+            <p class="section-intro mb-0">Projetos que mostram diferentes lados do meu trabalho — do desenvolvimento de
+              software à construção de produtos e experiências digitais.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 reveal">
+            <article class="project-card">
+              <div class="project-visual"><i class="bi bi-shield-check project-symbol"></i></div>
+              <div class="project-body">
+                <div class="project-meta">Projeto Integrador · IFSP · 2026</div>
+                <h3>Verifica Links</h3>
+                <p>Plataforma para análise de URLs potencialmente maliciosas, com o objetivo de ajudar usuários a
+                  reconhecer riscos antes de acessar um link. Projeto com backend em Node.js/Express e integração com
+                  serviços de análise de segurança.</p>
+                <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">APIs</span><span
+                  class="chip">Cibersegurança</span>
+                <a class="project-link" href="https://github.com/" target="_blank" rel="noopener">Adicionar repositório
+                  <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 reveal delay-1">
+            <article class="project-card">
+              <div class="project-visual"><i class="bi bi-compass project-symbol"></i></div>
+              <div class="project-body">
+                <div class="project-meta">Produto digital · 2023–2025</div>
+                <h3>Brassinatura</h3>
+                <p>Hub vocacional pensado para aproximar pessoas do universo das profissões. Atuei na concepção do
+                  produto, identidade, conteúdo e experiência digital, incluindo recursos como entrevistas profissionais
+                  e agenda de eventos.</p>
+                <span class="chip">JavaScript</span><span class="chip">Google Calendar API</span><span class="chip">UX /
+                  UI</span><span class="chip">Branding</span>
+                <a class="project-link" href="#contato">Quero apresentar o projeto <i
+                    class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 reveal">
+            <article class="project-card">
+              <div class="project-visual"><i class="bi bi-controller project-symbol"></i></div>
+              <div class="project-body">
+                <div class="project-meta">Projeto web · Aimu</div>
+                <h3>Aimu — experiências para o universo gamer</h3>
+                <p>Desenvolvimento de uma presença digital para uma marca criativa voltada ao público gamer, explorando
+                  apresentação de serviços, portfólio visual, animações e interações com foco em responsividade.</p>
+                <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span
+                  class="chip">Motion</span>
+                <a class="project-link" href="#contato">Ver detalhes em conversa <i
+                    class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 reveal delay-1">
+            <article class="project-card">
+              <div class="project-visual"><i class="bi bi-journal-code project-symbol"></i></div>
+              <div class="project-body">
+                <div class="project-meta">Formação técnica · IFSP</div>
+                <h3>Projetos e experimentos</h3>
+                <p>Exercícios e projetos acadêmicos que consolidam fundamentos de programação, lógica, estruturas de
+                  dados, banco de dados e desenvolvimento de aplicações.</p>
+                <span class="chip">C</span><span class="chip">Python</span><span class="chip">Java</span><span
+                  class="chip">SQL</span>
+                <a class="project-link" href="https://github.com/" target="_blank" rel="noopener">Adicionar GitHub <i
+                    class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="text-muted-custom small mt-4"><i class="bi bi-info-circle me-2 accent"></i>Os links de GitHub estão
+          como pontos de edição: substitua pelos repositórios reais antes de publicar.</p>
+      </div>
+    </section>
+
+    <!-- Seção de Livros com Abas (UX/UI, Softskills, Design) -->
+    <section class="section-space" id="livros">
+      <div class="container">
+        <div class="row align-items-end mb-4 g-3">
+          <div class="col-lg-7 reveal">
+            <span class="eyebrow">06 / ESTANTE</span>
+            <h2 class="section-title mt-4">Livros que me<br><span class="accent">acompanham.</span></h2>
+          </div>
+          <div class="col-lg-5 reveal delay-1">
+            <p class="section-intro mb-0">Uma seleção de leituras separadas por categorias que me acompanham na jornada
+              de tecnologia, produto e design.</p>
+          </div>
+        </div>
+
+        <!-- Abas de Navegação -->
+        <div class="reveal mb-4">
+          <div class="book-tabs" role="tablist">
+            <button class="book-tab-btn active" onclick="switchBookTab(event, 'uxui')" role="tab">UX / UI</button>
+            <button class="book-tab-btn" onclick="switchBookTab(event, 'softskills')" role="tab">Softskills</button>
+            <button class="book-tab-btn" onclick="switchBookTab(event, 'design')" role="tab">Design</button>
+          </div>
+        </div>
+
+        <!-- Categoria 1: UX/UI -->
+        <div id="uxui" class="book-category-pane active row g-4">
+          <div class="col-6 col-md-4 col-lg-3 reveal">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal"
+              data-title="O Design de O Dia a Dia" data-author="Don Norman"
+              data-review="Uma leitura essencial sobre usabilidade, affordance e como o design de produtos deve guiar intuitivamente as ações humanas."
+              data-img="assets/image (19) (4).png">
+              <img class="book-cover" src="assets/image (19) (4).png" alt="Capa do livro 1" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">UX / UI</div>
+                <h3>O Design do Dia a Dia</h3>
+                <p>Don Norman</p>
+                <p class="mt-1">Leitura fundamental sobre usabilidade.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal" data-title="Design Thinking"
+              data-author="Tim Brown"
+              data-review="Aborda conceitos diretos sobre usabilidade na Web, enfatizando que os sites devem ser intuitivos e óbvios."
+              data-img="assets/image (19) (5).png">
+              <img class="book-cover" src="assets/image (19) (5).png" alt="Capa do livro 2" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">UX / UI</div>
+                <h3>Design Thinking</h3>
+                <p>Tim Brown</p>
+                <p class="mt-1">Guia prático de usabilidade web.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal" data-title="Princípios de UX"
+              data-author="Daniel Furtado"
+              data-review="Aborda conceitos diretos sobre usabilidade na Web, enfatizando que os sites devem ser intuitivos e óbvios."
+              data-img="assets/image (19) (4) (1).png">
+              <img class="book-cover" src="assets/image (19) (4) (1).png" alt="Capa do livro 2" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">UX / UI</div>
+                <h3>Princípios de UX</h3>
+                <p>Daniel Furtado</p>
+                <p class="mt-1">Guia prático de usabilidade web.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal" data-title="Líder e Designer"
+              data-author="Victor Zanin"
+              data-review="Aborda conceitos diretos sobre usabilidade na Web, enfatizando que os sites devem ser intuitivos e óbvios."
+              data-img="assets/image (19) (4) (2).png">
+              <img class="book-cover" src="assets/image (19) (4) (2).png" alt="Capa do livro 2" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">UX / UI</div>
+                <h3>Líder e Designer</h3>
+                <p>Victor Zanin</p>
+                <p class="mt-1">Guia prático de usabilidade web.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Categoria 2: Softskills -->
+        <div id="softskills" class="book-category-pane row g-4">
+          <div class="col-6 col-md-4 col-lg-3 reveal">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal"
+              data-title="Como Fazer Amigos e Influenciar Pessoas" data-author="Dale Carnegie"
+              data-review="Grandes lições sobre comunicação interpessoal, empatia e como lidar com pessoas de forma construtiva."
+              data-img="assets/DaleBookClose.png">
+              <img class="book-cover" src="assets/DaleBookClose.png" alt="Capa do livro 3" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">Softskills</div>
+                <h3>Como Fazer Amigos</h3>
+                <p>Dale Carnegie</p>
+                <p class="mt-1">Relacionamento e comunicação.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 reveal">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal" data-title="Escutatória"
+              data-author="Dale Carnegie"
+              data-review="Grandes lições sobre comunicação interpessoal, empatia e como lidar com pessoas de forma construtiva."
+              data-img="assets/BrienBook.png">
+              <img class="book-cover" src="assets/BrienBook.png" alt="Capa do livro 3" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">Softskills</div>
+                <h3>Escutatória</h3>
+                <p>Dale Carnegie</p>
+                <p class="mt-1">Relacionamento e comunicação.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+
+
+        <!-- Categoria 3: Design -->
+        <div id="design" class="book-category-pane row g-4">
+          <div class="col-6 col-md-4 col-lg-3 reveal">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal"
+              data-title="O Design como Storytelling" data-author="Ellen Lupton"
+              data-review="Reflexões criativas sobre inspiração, originalidade e o processo de construir repertório visual e prático."
+              data-img="assets/EllenBookClose.png">
+              <img class="book-cover" src="assets/EllenBookClose.png" alt="Capa do livro 4" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">Design</div>
+                <h3>O Design como Storytelling</h3>
+                <p>Ellen Lupton</p>
+                <p class="mt-1">Criatividade e repertório.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3 reveal">
+            <article class="book-card" data-bs-toggle="modal" data-bs-target="#bookModal"
+              data-title="O Manual do Designer Competente" data-author="Diego Rangel"
+              data-review="Reflexões criativas sobre inspiração, originalidade e o processo de construir repertório visual e prático."
+              data-img="assets/DiegoBookClose.png">
+              <img class="book-cover" src="assets/DiegoBookClose.png" alt="Capa do livro 4" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+              <div class="book-cover-placeholder" style="display:none"><i class="bi bi-book book-placeholder-icon"></i>
+              </div>
+              <div class="book-body">
+                <div class="book-rating">Design</div>
+                <h3>O Manual do Designer Competente</h3>
+                <p>Diego Rangel</p>
+                <p class="mt-1">Criatividade e repertório.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="text-muted-custom small mt-4"><i class="bi bi-info-circle me-2 accent"></i>Clique em qualquer card de
+          livro para abrir a resenha detalhada.</p>
+      </div>
+    </section>
+
+    <!-- Modal Dinâmico para os Livros -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="eyebrow m-0" id="bookModalLabel">Detalhes da Leitura</span>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body p-4 p-md-5">
+            <div class="row g-4 align-items-center">
+              <div class="col-md-5 text-center">
+                <div id="modalCoverContainer"
+                  class="rounded-4 overflow-hidden border border-secondary border-opacity-25 shadow-sm">
+                  <!-- Inserido via JavaScript -->
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="book-rating mb-2">Resenha & Reflexão</div>
+                <h2 id="modalBookTitle" class="h3 fw-bold mb-1">Título do Livro</h2>
+                <p id="modalBookAuthor" class="text-muted-custom mb-4 font-monospace small">Autor</p>
+                <hr class="border-secondary opacity-25 mb-4">
+                <p id="modalBookReview" class="text-muted-custom line-height-base mb-0"
+                  style="font-size: 0.98rem; line-height: 1.8;">Descrição detalhada do livro...</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ghost btn-sm px-4" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section-space" id="formacao">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5 reveal">
+            <span class="eyebrow">07 / FORMAÇÃO</span>
+            <h2 class="section-title mt-4">Aprender faz<br>parte do <span class="accent">processo.</span></h2>
+          </div>
+          <div class="col-lg-7 reveal delay-1">
+            <div class="education-line">
+              <small>IFSP · CAMPUS BAURU</small>
+              <h3>Técnico em Informática</h3>
+              <p>Formação técnica com fundamentos de programação, sistemas, banco de dados e desenvolvimento de
+                soluções.</p>
+            </div>
+            <div class="education-line">
+              <small>FORMAÇÃO COMPLEMENTAR</small>
+              <h3>Desenvolvimento TOTVS Fluig</h3>
+              <p>Treinamento de 70 horas em desenvolvimento na plataforma Fluig, em parceria com a SMS.Tech e a
+                Concilig.</p>
+            </div>
+            <div class="education-line">
+              <small>DESENVOLVIMENTO PESSOAL</small>
+              <h3>Dale Carnegie</h3>
+              <p>Estudos voltados à comunicação, relacionamento interpessoal e colaboração.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ▼▼▼ COLE A PARTIR DAQUI: dentro do main, logo antes da seção de Livros (ou onde preferir) ▼▼▼ -->
+
+    <style>
+      /* ===== Camada global de interação (afeta o portfólio inteiro) ===== */
+      #sp {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--accent, #d9ff52);
+        transform-origin: 0 50%;
+        transform: scaleX(var(--sp, 0));
+        z-index: 1100;
+        pointer-events: none
+      }
+
+      .nav-link.active {
+        color: var(--accent, #d9ff52) !important
+      }
+
+      .fx {
+        position: relative
+      }
+
+      .fx::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .35s;
+        background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent, #d9ff52) 13%, transparent), transparent 62%)
+      }
+
+      .fx:hover::before {
+        opacity: 1
+      }
+
+      /* ===== Cases ===== */
+      #cases {
+        --a: var(--accent, #d9ff52);
+        --sf: var(--surface, #171914);
+        --sf2: var(--surface-2, #1d2019);
+        --ln: var(--line, rgba(244, 242, 233, .13));
+        --mt: var(--muted, #a5a89a);
+        --ik: var(--ink, #f4f2e9);
+        --mn: var(--mono, "DM Mono", ui-monospace, monospace);
+        --sn: var(--sans, "Manrope", system-ui, sans-serif)
+      }
+
+      #cases .case {
+        border: 1px solid var(--ln);
+        border-radius: 28px;
+        padding: clamp(22px, 4vw, 44px);
+        background: linear-gradient(160deg, color-mix(in srgb, var(--a) 6%, var(--sf)), var(--sf))
+      }
+
+      #cases .cs-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 14px
+      }
+
+      #cases .cs-tags span {
+        font: .66rem var(--mn);
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        color: var(--a);
+        border: 1px solid color-mix(in srgb, var(--a) 40%, transparent);
+        border-radius: 99px;
+        padding: 4px 10px
+      }
+
+      #cases .cs-head {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px
+      }
+
+      #cases .cs-head h3 {
+        font-size: clamp(2rem, 4.6vw, 3.4rem);
+        font-weight: 800;
+        letter-spacing: -.06em;
+        line-height: 1;
+        margin: 0 0 12px
+      }
+
+      #cases .cs-lead {
+        max-width: 600px;
+        color: var(--mt);
+        line-height: 1.8;
+        margin: 0
+      }
+
+      #cases .cs-case-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 22px;
+        padding: 7px 8px 7px 20px;
+        border: 1px solid var(--a);
+        border-radius: 999px;
+        background: var(--a);
+        color: #171914;
+        font-size: .86rem;
+        font-weight: 800;
+        letter-spacing: -.01em;
+        box-shadow: 0 8px 26px color-mix(in srgb, var(--a) 16%, transparent);
+        transition: transform .25s ease, background .25s ease, box-shadow .25s ease
+      }
+
+      #cases .cs-case-cta:hover {
+        color: #171914;
+        background: color-mix(in srgb, var(--a) 78%, white);
+        transform: translateY(-3px);
+        box-shadow: 0 14px 34px color-mix(in srgb, var(--a) 24%, transparent)
+      }
+
+      #cases .cs-case-cta:focus-visible {
+        outline: 2px solid var(--a);
+        outline-offset: 4px
+      }
+
+      #cases .cs-case-cta-icon {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(23, 25, 20, .12);
+        font-size: 1rem;
+        transition: transform .25s ease
+      }
+
+      #cases .cs-case-cta:hover .cs-case-cta-icon {
+        transform: translate(2px, -2px)
+      }
+
+      #cases .cs-metric {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        max-width: 300px
+      }
+
+      #cases .cs-metric b {
+        font: 800 clamp(3.4rem, 8vw, 5.6rem)/.8 var(--sn);
+        letter-spacing: -.08em;
+        color: var(--a)
+      }
+
+      #cases .cs-metric span {
+        color: var(--mt);
+        font-size: .82rem;
+        line-height: 1.55
+      }
+
+      /* fluxograma */
+      #cases .fl {
+        --ac: var(--a);
+        margin: 30px 0;
+        border: 1px solid var(--ln);
+        border-radius: 22px;
+        background: var(--sf2);
+        overflow: hidden
+      }
+
+      #cases .fl[data-mode=antes] {
+        --ac: #ffb347
+      }
+
+      #cases .fl-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--ln)
+      }
+
+      #cases .fl-ttl {
+        font: .7rem var(--mn);
+        color: var(--mt);
+        letter-spacing: .06em
+      }
+
+      #cases .fl-ctl {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center
+      }
+
+      #cases .cs-seg {
+        display: inline-flex;
+        padding: 3px;
+        border: 1px solid var(--ln);
+        border-radius: 99px
+      }
+
+      #cases .cs-seg button,
+      #cases .fl-btn {
+        border: 0;
+        background: transparent;
+        color: var(--mt);
+        font: .72rem var(--mn);
+        padding: 7px 14px;
+        border-radius: 99px;
+        cursor: pointer;
+        transition: .2s
+      }
+
+      #cases .cs-seg button.on {
+        background: var(--ac);
+        color: #171914;
+        font-weight: 600
+      }
+
+      #cases .fl-btn {
+        border: 1px solid var(--ln);
+        color: var(--ik)
+      }
+
+      #cases .fl-btn:hover,
+      #cases .cs-seg button:not(.on):hover {
+        color: var(--ac);
+        border-color: var(--ac)
+      }
+
+      #cases button:focus-visible {
+        outline: 2px solid var(--ac, var(--a));
+        outline-offset: 3px
+      }
+
+      #cases .fl-stage {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 34px 8px 22px;
+        background-image: linear-gradient(rgba(127, 127, 127, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(127, 127, 127, .07) 1px, transparent 1px);
+        background-size: 40px 40px
+      }
+
+      #cases .fl-track {
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        top: 72px;
+        height: 2px;
+        background: var(--ln)
+      }
+
+      #cases .fl-fill {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: calc(var(--p, 0)*100%);
+        background: var(--ac)
+      }
+
+      #cases .fl-dot {
+        position: absolute;
+        top: 50%;
+        left: calc(var(--p, 0)*100%);
+        width: 12px;
+        height: 12px;
+        margin: -6px 0 0 -6px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--ac) 35%, transparent), 0 0 22px var(--ac)
+      }
+
+      #cases .fl-n {
+        all: unset;
+        box-sizing: border-box;
+        cursor: pointer;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        text-align: center
+      }
+
+      #cases .fl-n:focus-visible .fl-c {
+        outline: 2px solid var(--ac);
+        outline-offset: 4px
+      }
+
+      #cases .fl-c {
+        position: relative;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--sf);
+        border: 1.5px solid var(--ln);
+        transition: .35s cubic-bezier(.2, .8, .2, 1)
+      }
+
+      #cases .fl-c img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain
+      }
+
+      #cases .fl-c i {
+        font-size: 1.85rem;
+        color: var(--mt);
+        transition: color .3s
+      }
+
+      #cases .fl-n:hover .fl-c {
+        border-color: color-mix(in srgb, var(--ac) 60%, transparent)
+      }
+
+      #cases .fl-n.done .fl-c {
+        border-color: color-mix(in srgb, var(--ac) 55%, transparent)
+      }
+
+      #cases .fl-n.done i,
+      #cases .fl-n.on i {
+        color: var(--ac)
+      }
+
+      #cases .fl-n.on .fl-c {
+        border-color: var(--ac);
+        transform: scale(1.1);
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--ac) 14%, transparent), 0 0 36px color-mix(in srgb, var(--ac) 32%, transparent)
+      }
+
+      #cases .fl-n.on .fl-c::after {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: 50%;
+        border: 1.5px solid var(--ac);
+        animation: flring 1.25s ease-out
+      }
+
+      #cases .fl[data-mode=antes] .fl-n[data-man] .fl-c {
+        border-style: dashed
+      }
+
+      #cases .fl-l {
+        display: flex;
+        flex-direction: column;
+        gap: 3px
+      }
+
+      #cases .fl-l b {
+        font: 700 .95rem var(--sn)
+      }
+
+      #cases .fl-l small {
+        font: .64rem var(--mn);
+        text-transform: uppercase;
+        letter-spacing: .08em;
+        color: var(--mt)
+      }
+
+      #cases .fl-foot {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid var(--ln)
+      }
+
+      #cases .fl-detail {
+        padding: 22px 24px;
+        min-height: 150px
+      }
+
+      #cases .fl-detail>* {
+        animation: flup .4s ease both
+      }
+
+      #cases .fl-detail small {
+        font: .68rem var(--mn);
+        color: var(--ac);
+        letter-spacing: .1em
+      }
+
+      #cases .fl-detail b {
+        display: block;
+        font-size: 1.3rem;
+        letter-spacing: -.03em;
+        margin: 6px 0
+      }
+
+      #cases .fl-detail p {
+        margin: 0;
+        color: var(--mt);
+        font-size: .92rem;
+        line-height: 1.7
+      }
+
+      #cases .fl-log {
+        padding: 20px 24px;
+        border-left: 1px solid var(--ln);
+        background: rgba(0, 0, 0, .2);
+        font: .74rem/1.95 var(--mn);
+        color: var(--mt)
+      }
+
+      #cases .fl-log div {
+        animation: flup .3s ease both;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+      }
+
+      #cases .fl-log i {
+        font-style: normal;
+        color: var(--ac);
+        margin-right: 6px
+      }
+
+      #cases .fl-log .cur {
+        color: var(--ac);
+        animation: flbl 1s steps(2) infinite
+      }
+
+      @keyframes flring {
+        from {
+          transform: scale(1);
+          opacity: .7
+        }
+
+        to {
+          transform: scale(1.75);
+          opacity: 0
+        }
+      }
+
+      @keyframes flup {
+        from {
+          opacity: 0;
+          transform: translateY(6px)
+        }
+
+        to {
+          opacity: 1;
+          transform: none
+        }
+      }
+
+      @keyframes flbl {
+        50% {
+          opacity: 0
+        }
+      }
+
+      /* abas + corpo */
+      #cases .cs-body {
+        display: grid;
+        grid-template-columns: 1.25fr .75fr;
+        gap: 32px;
+        align-items: start
+      }
+
+      #cases .cs-tabs {
+        display: inline-flex;
+        gap: 4px;
+        padding: 4px;
+        border: 1px solid var(--ln);
+        border-radius: 99px;
+        margin-bottom: 20px
+      }
+
+      #cases .cs-tab {
+        border: 0;
+        background: transparent;
+        color: var(--mt);
+        font: .74rem var(--mn);
+        padding: 8px 18px;
+        border-radius: 99px;
+        cursor: pointer;
+        transition: .2s
+      }
+
+      #cases .cs-tab.on {
+        background: var(--a);
+        color: #171914;
+        font-weight: 600
+      }
+
+      #cases .cs-pane {
+        color: var(--mt);
+        line-height: 1.85;
+        animation: flup .4s ease both
+      }
+
+      #cases .cs-pane p {
+        margin: 0 0 12px
+      }
+
+      #cases .cs-note {
+        border-left: 2px solid var(--a);
+        padding: 2px 0 2px 14px;
+        font-size: .88rem
+      }
+
+      #cases .cs-side {
+        display: flex;
+        flex-direction: column;
+        gap: 14px
+      }
+
+      #cases .cs-side .chips {
+        margin-bottom: 6px
+      }
+
+      #cases .cs-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 16px;
+        border: 1px solid var(--ln);
+        border-radius: 14px;
+        color: var(--ik);
+        font-size: .88rem;
+        font-weight: 700;
+        transition: .25s
+      }
+
+      #cases .cs-link:hover {
+        border-color: var(--a);
+        color: var(--a);
+        transform: translateX(4px)
+      }
+
+      #cases .cs-mini {
+        display: block;
+        height: 100%;
+        padding: 26px;
+        border: 1px solid var(--ln);
+        border-radius: 22px;
+        background: var(--sf);
+        transition: transform .35s ease, border-color .35s
+      }
+
+      #cases .cs-mini:hover {
+        transform: translateY(-6px);
+        border-color: color-mix(in srgb, var(--a) 50%, transparent);
+        color: inherit
+      }
+
+      #cases .cs-mini h4 {
+        font-size: 1.3rem;
+        font-weight: 800;
+        letter-spacing: -.04em;
+        margin: 0 0 10px
+      }
+
+      #cases .cs-mini p {
+        color: var(--mt);
+        font-size: .9rem;
+        line-height: 1.7;
+        margin: 0 0 12px
+      }
+
+      #cases .cs-mini p b {
+        display: block;
+        font: .64rem var(--mn);
+        color: var(--a);
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        margin-top: 6px
+      }
+
+      @media (max-width:991.98px) {
+        #cases .cs-body {
+          grid-template-columns: 1fr
+        }
+      }
+
+      @media (max-width:767.98px) {
+        #cases .fl-stage {
+          grid-template-columns: 1fr;
+          grid-auto-rows: 92px;
+          padding: 8px 28px
+        }
+
+        #cases .fl-n {
+          flex-direction: row;
+          gap: 16px;
+          justify-content: flex-start;
+          text-align: left
+        }
+
+        #cases .fl-c {
+          width: 56px;
+          height: 56px
+        }
+
+        #cases .fl-c img {
+          width: 32px;
+          height: 32px
+        }
+
+        #cases .fl-c i {
+          font-size: 1.4rem
+        }
+
+        #cases .fl-track {
+          left: 55px;
+          right: auto;
+          top: 46px;
+          bottom: 46px;
+          width: 2px;
+          height: auto
+        }
+
+        #cases .fl-fill {
+          inset: 0 0 auto 0;
+          width: auto;
+          height: calc(var(--p, 0)*100%)
+        }
+
+        #cases .fl-dot {
+          top: calc(var(--p, 0)*100%);
+          left: 50%
+        }
+
+        #cases .fl-foot {
+          grid-template-columns: 1fr
+        }
+
+        #cases .fl-log {
+          border-left: 0;
+          border-top: 1px solid var(--ln)
+        }
+      }
+
+      @media (prefers-reduced-motion:reduce) {
+        #cases * {
+          animation: none !important;
+          transition: none !important
+        }
+      }
+    </style>
+
+    <section class="section-space" id="cases">
+      <div class="container">
+        <div class="row align-items-end mb-5 g-3">
+          <div class="col-lg-7 reveal">
+            <span class="eyebrow">// CASES</span>
+            <h2 class="section-title mt-4">Problemas reais,<br><span class="accent">soluções no ar.</span></h2>
+          </div>
+          <div class="col-lg-5 reveal delay-1">
+            <p class="section-intro mb-0">Situações em que identifiquei um atrito no dia a dia, desenhei a solução e a
+              coloquei para funcionar. O destaque é uma ferramenta que criei para quem desenvolve no Fluig.</p>
+          </div>
+        </div>
+
+        <article class="case reveal">
+          <div class="cs-head">
+            <div>
+              <div class="cs-tags" id="case-tags"><span>Case em destaque</span><span>Extensão VS
+                  Code</span><span>Git</span><span>Automação</span></div>
+              <h3>Fluig Tracker</h3>
+              <p class="cs-lead">Versão comunitária da extensão Fluig para VS Code, com integração Git: cada exportação
+                bem-sucedida vira, sozinha, um commit enviado ao GitHub.</p>
+              <a class="cs-case-cta" href="../cases.html" aria-label="Conheça o case Fluig Tracker">
+                <span>Conheça esse case</span>
+                <span class="cs-case-cta-icon" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+              </a>
+            </div>
+            <div class="cs-metric"><b>0</b><span>registros manuais por exportação: o commit e o push saem
+                sozinhos</span></div>
+          </div>
+
+          <!-- Fluxograma animado nativo (HTML + CSS + JS) -->
+          <div class="fl fx" id="flow" data-mode="depois">
+            <div class="fl-bar">
+              <span class="fl-ttl">// fluxo de exportação → github</span>
+              <div class="fl-ctl">
+                <div class="cs-seg" role="group" aria-label="Comparar cenários">
+                  <button type="button" data-m="antes">Antes</button>
+                  <button type="button" data-m="depois" class="on">Depois</button>
+                </div>
+                <button type="button" class="fl-btn" id="flPlay"><i class="bi bi-pause-fill"></i> Pausar</button>
+                <button type="button" class="fl-btn" id="flRestart"><i class="bi bi-arrow-repeat"></i>
+                  Reiniciar</button>
+              </div>
+            </div>
+            <div class="fl-stage">
+              <div class="fl-track" aria-hidden="true">
+                <div class="fl-fill"></div>
+                <div class="fl-dot"></div>
+              </div>
+              <button type="button" class="fl-n" data-i="0"><span class="fl-c"><img src="assets/fluig.png" alt=""
+                    data-fb="bi bi-droplet-half"></span><span
+                  class="fl-l"><b>Fluig</b><small>origem</small></span></button>
+              <button type="button" class="fl-n" data-i="1"><span class="fl-c"><i
+                    class="bi bi-check2-circle"></i></span><span
+                  class="fl-l"><b>Exportação</b><small>concluída</small></span></button>
+              <button type="button" class="fl-n" data-i="2" data-man><span class="fl-c"><img
+                    src="assets/FluigTrackerIcon.png" alt="" data-fb="bi bi-git"></span><span class="fl-l"><b>Git
+                    Commit</b><small>automático</small></span></button>
+              <button type="button" class="fl-n" data-i="3" data-man><span class="fl-c"><i
+                    class="bi bi-cloud-arrow-up"></i></span><span class="fl-l"><b>Git
+                    Push</b><small>automático</small></span></button>
+              <button type="button" class="fl-n" data-i="4"><span class="fl-c"><i class="bi bi-github"></i></span><span
+                  class="fl-l"><b>GitHub</b><small>histórico</small></span></button>
+            </div>
+            <div class="fl-foot">
+              <div class="fl-detail" aria-live="polite"></div>
+              <div class="fl-log" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="cs-body">
+            <div>
+              <div class="cs-tabs" role="tablist">
+                <button type="button" class="cs-tab on" role="tab" aria-selected="true"
+                  data-t="t-prob">Problema</button>
+                <button type="button" class="cs-tab" role="tab" aria-selected="false" data-t="t-sol">Solução</button>
+                <button type="button" class="cs-tab" role="tab" aria-selected="false" data-t="t-res">Resultado</button>
+              </div>
+              <div class="cs-pane" id="t-prob" role="tabpanel">
+                <p>Exportar artefatos para o Fluig faz parte da rotina de quem desenvolve na plataforma, mas o registro
+                  de cada exportação dependia de uma operação manual, repetida toda vez.</p>
+              </div>
+              <div class="cs-pane" id="t-sol" role="tabpanel" hidden>
+                <p>Parti da extensão da comunidade Fluiggers e adicionei uma camada de integração com Git: ao concluir
+                  uma exportação com sucesso, a extensão cria o commit e faz o push para o repositório remoto
+                  configurado.</p>
+              </div>
+              <div class="cs-pane" id="t-res" role="tabpanel" hidden>
+                <p>O histórico das exportações passa a ser acompanhado direto pelo GitHub, sem registrar cada operação à
+                  mão. A extensão é distribuída em pacote <code>.vsix</code>, instalável pelo próprio VS Code.</p>
+                <p class="cs-note">Limitação atual: o pacote usa um caminho local específico para o repositório de
+                  atividade e precisa ser adaptado em outros ambientes.</p>
+              </div>
+            </div>
+            <div class="cs-side">
+              <div class="chips"><span class="chip">VS Code</span><span class="chip">Git</span><span
+                  class="chip">GitHub</span><span class="chip">TOTVS Fluig</span><span class="chip">VSIX</span></div>
+              <!-- TROQUE os dois primeiros href pelos links reais -->
+              <a class="cs-link" href="https://github.com/" target="_blank" rel="noopener">Ver repositório <i
+                  class="bi bi-arrow-up-right"></i></a>
+              <a class="cs-link" href="https://github.com/" target="_blank" rel="noopener">Baixar a extensão (.vsix) <i
+                  class="bi bi-download"></i></a>
+              <a class="cs-link" href="https://github.com/fluiggers/fluig-vscode-extension" target="_blank"
+                rel="noopener">Projeto original (Fluiggers) <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <div class="row g-3 mt-1">
+          <div class="col-md-6 reveal">
+            <a class="cs-mini fx" href="#projetos">
+              <div class="cs-tags"><span>Projeto Integrador</span><span>Cibersegurança</span></div>
+              <h4>Verifica Links</h4>
+              <p><b>Problema</b>Reconhecer um link malicioso antes de clicar não é simples para o usuário.
+                <b>Solução</b>Plataforma que analisa URLs suspeitas antes do acesso, com backend Node.js/Express e
+                serviços de análise de segurança.
+              </p>
+              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">APIs</span>
+            </a>
+          </div>
+          <div class="col-md-6 reveal delay-1">
+            <a class="cs-mini fx" href="#projetos">
+              <div class="cs-tags"><span>Produto digital</span><span>UX / UI</span></div>
+              <h4>Brassinatura</h4>
+              <p><b>Problema</b>Aproximar pessoas do universo das profissões, de graça e com experiência de qualidade.
+                <b>Solução</b>Hub vocacional com entrevistas profissionais e agenda de eventos integrada ao Google
+                Calendar.
+              </p>
+              <span class="chip">JavaScript</span><span class="chip">Google Calendar API</span><span
+                class="chip">Branding</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (() => {
+        const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+        const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ===== Camada global: progresso de rolagem, link ativo e brilho que segue o cursor ===== */
+        if (!$('#sp')) {
+          const sp = document.createElement('div'); sp.id = 'sp'; document.body.prepend(sp);
+          const upd = () => sp.style.setProperty('--sp', scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight));
+          addEventListener('scroll', upd, { passive: true }); upd();
+        }
+        const links = $$('.nav-link[href^="#"]');
+        if (links.length) {
+          const io = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+          }), { rootMargin: '-45% 0px -50% 0px' });
+          $$('main section[id]').forEach(s => io.observe(s));
+        }
+        $$('.about-card,.stack-panel,.project-card,.book-card,.contact-box,.case,.cs-mini,.fl').forEach(el => {
+          el.classList.add('fx');
+          el.addEventListener('pointermove', e => {
+            const r = el.getBoundingClientRect();
+            el.style.setProperty('--mx', e.clientX - r.left + 'px'); el.style.setProperty('--my', e.clientY - r.top + 'px');
+          });
+        });
+
+        /* ===== Ícones de reserva: se a imagem não existir, troca por um ícone ===== */
+        $$('#cases img[data-fb]').forEach(im => {
+          const sw = () => { const i = document.createElement('i'); i.className = im.dataset.fb; im.replaceWith(i); };
+          im.complete && !im.naturalWidth ? sw() : im.addEventListener('error', sw, { once: true });
+        });
+
+        /* ===== Abas Problema / Solução / Resultado ===== */
+        $$('.cs-tab').forEach(b => b.addEventListener('click', () => {
+          $$('.cs-tab').forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-selected', x === b); });
+          $$('.cs-pane').forEach(p => p.hidden = p.id !== b.dataset.t);
+        }));
+
+        /* ===== Fluxograma animado ===== */
+        const fl = $('#flow'); if (!fl) return;
+        const nodes = $$('.fl-n', fl), N = nodes.length, det = $('.fl-detail', fl), logEl = $('.fl-log', fl), playBtn = $('#flPlay');
+        // [tag do log, título, descrição, linha do log]
+        const MODES = {
+          depois: [
+            ['fluig', 'Fluig', 'Tudo começa em uma exportação feita pela extensão, direto do VS Code para o servidor Fluig.', 'exportando para o servidor…'],
+            ['fluig', 'Exportação concluída', 'Só exportações bem-sucedidas entram no histórico. É aqui que o Fluig Tracker é acionado.', 'exportação concluída ✓'],
+            ['git', 'Git Commit', 'O commit é criado automaticamente no repositório de atividade configurado no ambiente local.', 'commit criado automaticamente'],
+            ['git', 'Git Push', 'O commit segue por push para o repositório remoto, sem nenhum comando manual.', 'push → repositório remoto'],
+            ['github', 'GitHub', 'O histórico das exportações fica no GitHub, pronto para consulta e acompanhamento.', 'histórico atualizado ✓']],
+          antes: [
+            ['fluig', 'Fluig', 'A exportação sai do VS Code para o servidor Fluig normalmente.', 'exportando para o servidor…'],
+            ['fluig', 'Exportação concluída', 'Concluída. Daqui em diante, o registro era manual.', 'exportação concluída ✓'],
+            ['você', 'Git Commit (manual)', 'Um commit feito à mão: uma operação a mais, repetida a cada exportação.', 'aguardando commit manual…'],
+            ['você', 'Git Push (manual)', 'Mais um comando manual para o histórico chegar ao repositório remoto.', 'aguardando push manual…'],
+            ['github', 'GitHub', 'O histórico só existe quando o registro manual foi feito.', 'histórico (se registrado)']]
+        };
+        const SUB = { depois: ['origem', 'concluída', 'automático', 'automático', 'histórico'], antes: ['origem', 'concluída', 'manual', 'manual', 'se registrado'] };
+        let mode = 'depois', S = MODES.depois, run = 0, idx = 0, cur = 0, playing = false, userPaused = false;
+
+        const setP = p => { cur = p; fl.style.setProperty('--p', p); };
+        const wait = (ms, k) => new Promise(r => setTimeout(() => r(k === run), ms));
+        const glide = (a, b, ms, k) => new Promise(r => {
+          const t0 = performance.now();
+          (function f(t) {
+            if (k !== run) return r(false);
+            const x = Math.min(1, (t - t0) / ms), e = x < .5 ? 2 * x * x : 1 - (-2 * x + 2) ** 2 / 2;
+            setP(a + (b - a) * e); x < 1 ? requestAnimationFrame(f) : r(true);
+          })(t0);
+        });
+        const sync = () => {
+          playBtn.innerHTML = playing ? '<i class="bi bi-pause-fill"></i> Pausar' : '<i class="bi bi-play-fill"></i> Reproduzir';
+        };
+        function show(i) {
+          idx = i;
+          nodes.forEach((n, j) => {
+            n.classList.toggle('on', j === i); n.classList.toggle('done', j < i);
+            j === i ? n.setAttribute('aria-current', 'step') : n.removeAttribute('aria-current');
+          });
+          det.innerHTML = `<small>PASSO ${i + 1} DE ${N}</small><b>${S[i][1]}</b><p>${S[i][2]}</p>`;
+          logEl.innerHTML = S.slice(0, i + 1).map(s => `<div><i>[${s[0]}]</i>${s[3]}</div>`).join('') + '<div class="cur">▍</div>';
+        }
+        async function play(start = 0) {
+          const k = ++run; playing = true; sync();
+          let i = start;
+          for (; ;) {
+            if (i === 0) { setP(0); show(0); }
+            const manual = mode === 'antes' && (i === 2 || i === 3);
+            if (!await wait(manual ? 1900 : 1000, k)) return;
+            if (i === N - 1) { if (!await wait(2200, k)) return; i = 0; continue; }
+            const to = (i + 1) / (N - 1);
+            if (!await glide(cur, to, 1000 * (to - cur) * (N - 1), k)) return;
+            show(++i);
+          }
+        }
+        const pause = () => { run++; playing = false; sync(); };
+        function setMode(m) {
+          mode = m; S = MODES[m]; fl.dataset.mode = m;
+          $$('.cs-seg button', fl).forEach(b => b.classList.toggle('on', b.dataset.m === m));
+          $$('.fl-l small', fl).forEach((s, i) => s.textContent = SUB[m][i]);
+          userPaused = false; reduce ? (setP(1), show(N - 1), pause()) : play(0);
+        }
+
+        nodes.forEach((n, i) => n.addEventListener('click', () => { userPaused = true; pause(); setP(i / (N - 1)); show(i); }));
+        $$('.cs-seg button', fl).forEach(b => b.addEventListener('click', () => setMode(b.dataset.m)));
+        playBtn.addEventListener('click', () => { if (playing) { userPaused = true; pause(); } else { userPaused = false; play(idx); } });
+        $('#flRestart').addEventListener('click', () => { userPaused = false; reduce ? (setP(0), show(0)) : play(0); });
+
+        setP(0); show(0); sync();
+        if (reduce) { setP(1); show(N - 1); pause(); }
+        // só anima enquanto o fluxograma está visível (economiza CPU e começa do início quando você chega nele)
+        new IntersectionObserver(([e]) => {
+          if (reduce) return;
+          if (e.isIntersecting) { if (!playing && !userPaused) play(idx); } else if (playing) pause();
+        }, { threshold: .35 }).observe(fl);
+      })();
+    </script>
+
+    <!-- ▲▲▲ ATÉ AQUI ▲▲▲  ·  Não esqueça do link no menu: <a class="nav-link" href="#cases">CASES</a> -->
+
+    <section class="section-space" id="contato">
+      <div class="container">
+        <div class="contact-box reveal">
+          <span class="eyebrow">08 / CONTATO</span>
+          <h2 class="mt-4 mb-4">Tem um desafio?<br><span class="accent">Vamos conversar.</span></h2>
+          <p class="section-intro mb-4">Estou aberto a oportunidades em desenvolvimento de software, projetos digitais e
+            colaboração com pessoas que gostam de transformar ideias em soluções.</p>
+          <a class="btn-accent" href="mailto:flruedigerlima@gmail.com">Entre em contato <i
+              class="bi bi-arrow-up-right"></i></a>
+          <div class="mt-4">
+            <a class="contact-detail" href="mailto:flruedigerlima@gmail.com"><i class="bi bi-envelope"></i>
+              flruedigerlima@gmail.com</a>
+            <a class="contact-detail" href="tel:+5514997979301"><i class="bi bi-telephone"></i> (14) 99797-9301</a>
+            <!-- Adicione aqui seus links reais de LinkedIn e GitHub -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>© <span id="year"></span> FELIPE LUCAS RUEDIGER LIMA</span>
+      <span>FEITO COM CURIOSIDADE E CAFÉ <span class="accent">✳</span></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar ganha fundo/borda ao sair do topo.
+    const nav = document.getElementById('siteNav');
+    const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+    updateNav();
+    window.addEventListener('scroll', updateNav, { passive: true });
+
+    // Revela elementos conforme entram na tela.
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Fecha o menu mobile depois de navegar.
+    document.querySelectorAll('#mainNav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const menu = document.getElementById('mainNav');
+        if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
+      });
+    });
+
+    // Função de alternar abas de livros
+    function switchBookTab(event, categoryId) {
+      document.querySelectorAll('.book-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.book-category-pane').forEach(pane => pane.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+      document.getElementById(categoryId).classList.add('active');
+    }
+
+    // Script para preencher dinamicamente o Modal de Livros com efeito desfocado
+    const bookModal = document.getElementById('bookModal');
+    if (bookModal) {
+      bookModal.addEventListener('show.bs.modal', event => {
+        const card = event.relatedTarget;
+        const title = card.getAttribute('data-title');
+        const author = card.getAttribute('data-author');
+        const review = card.getAttribute('data-review');
+        const imgSrc = card.getAttribute('data-img');
+
+        document.getElementById('modalBookTitle').textContent = title;
+        document.getElementById('modalBookAuthor').textContent = author;
+        document.getElementById('modalBookReview').textContent = review;
+
+        const coverContainer = document.getElementById('modalCoverContainer');
+        const imgElement = card.querySelector('img.book-cover');
+
+        // Verifica se a imagem carregou com sucesso ou se exibiu o placeholder
+        if (imgElement && imgElement.complete && imgElement.naturalHeight !== 0 && window.getComputedStyle(imgElement).display !== 'none') {
+          coverContainer.innerHTML = `<img src="${imgSrc}" class="w-100 h-auto object-fit-cover" style="aspect-ratio: 3/4;" alt="${title}">`;
+        } else {
+          coverContainer.innerHTML = `
+            <div class="d-grid place-items-center py-5" style="aspect-ratio: 3/4; background: var(--surface-2);">
+              <i class="bi bi-book book-placeholder-icon" style="font-size: 3.5rem;">Capa indisponível</i>
+            </div>`;
+        }
+      });
+    }
+
+    // Alternância de tema com preferência salva no navegador.
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    const initialTheme = savedTheme === 'light' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', initialTheme);
+
+    function updateThemeControl(theme) {
+      const light = theme === 'light';
+      themeIcon.className = light ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+      themeToggle.setAttribute('aria-label', light ? 'Ativar tema escuro' : 'Ativar tema claro');
+      themeToggle.setAttribute('title', light ? 'Ativar tema escuro' : 'Ativar tema claro');
+    }
+    updateThemeControl(initialTheme);
+    themeToggle.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('portfolio-theme', next);
+      updateThemeControl(next);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+
+  </script>
+</body>
+
+</html>
