@@ -1481,9 +1481,26 @@
       position: absolute;
       left: 0;
       top: 0;
+      width: 1em;
+      height: 1em;
+      margin: -.125em 0 0 -.89em;
+      font-size: 1.3rem;
+      line-height: 1;
+      color: var(--ink);
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .5));
       z-index: 30;
       pointer-events: none;
-      transition: transform .85s cubic-bezier(.5, 0, .2, 1)
+      opacity: 0;
+      transition: transform .75s cubic-bezier(.5, 0, .2, 1), opacity .3s
+    }
+
+    .pt.on {
+      opacity: 1
+    }
+
+    .pt::before {
+      display: block;
+      vertical-align: 0
     }
 
     .rp {
@@ -1825,7 +1842,7 @@
       último?".</p>
     <div class="acts rv"><a class="btn a" href="#cenas">Ver a história <i class="bi bi-arrow-down"></i></a>
       
-      <a class="btn" href="https://github.com/flruedigerlima/fluig-tracker-log" target="_blank" rel="noopener"><i class="bi bi-github"></i>
+      <a class="btn" href="https://github.com/fluig-tracker-log" target="_blank" rel="noopener"><i class="bi bi-github"></i>
         Repositório</a>
       <a class="btn" href="https://github.com/fluiggers/fluig-vscode-extension" target="_blank" rel="noopener">Projeto
         original <i class="bi bi-arrow-up-right"></i></a>
@@ -1996,10 +2013,7 @@
               </div>
             </div>
             <div class="kk" id="kk"></div>
-            <svg class="pt" id="pt" width="22" height="26" viewBox="0 0 22 26">
-              <path d="M2 1v20l5.5-5 4 8.5 3-1.5-4-8.2H19z" fill="#fff" stroke="#111" stroke-width="1.6"
-                stroke-linejoin="round" />
-            </svg>
+            <i class="bi bi-cursor-fill pt" id="pt"></i>
           </div>
         </div>
       </div>
@@ -2096,7 +2110,7 @@
       const dv = $('#dv'), wrap = $('#dwrap'), pt = $('#pt'), mn = $('#mn'), qi = $('#qi'), qin = $('#qin'), tt = $('#tt'), kk = $('#kk'), stx = $('#stx');
       let K = 1, NARROW = false, camX = 0;
       const cam = (x, instant) => { if (!NARROW) return; const vw = wrap.clientWidth / K; camX = Math.max(0, Math.min(960 - vw, x - vw / 2)); if (instant) dv.style.transition = 'none'; dv.style.transform = `scale(${K}) translate(${-camX}px,0)`; if (instant) { dv.getBoundingClientRect(); dv.style.transition = '' } };
-      const fit = () => { NARROW = wrap.clientWidth < 700; K = NARROW ? Math.max(.5, Math.min(.7, wrap.clientWidth / 545)) : wrap.clientWidth / 960; dv.classList.toggle('nr', NARROW); wrap.style.height = 540 * K + 'px'; dv.style.transition = 'none'; dv.style.transform = `scale(${K}) translate(${-(NARROW ? camX : 0)}px,0)`; dv.getBoundingClientRect(); dv.style.transition = '' }; new ResizeObserver(fit).observe(wrap); fit();
+      const fit = () => { NARROW = wrap.clientWidth < 700; K = NARROW ? Math.max(.5, Math.min(.7, wrap.clientWidth / 545)) : wrap.clientWidth / 960; dv.classList.toggle('nr', NARROW); pt.style.fontSize = (20.8 / K) + 'px'; wrap.style.height = 540 * K + 'px'; dv.style.transition = 'none'; dv.style.transform = `scale(${K}) translate(${-(NARROW ? camX : 0)}px,0)`; dv.getBoundingClientRect(); dv.style.transition = '' }; new ResizeObserver(fit).observe(wrap); fit();
       const URL_ = 'https://github.com/flruedigerlima/processo_x.git';
       /* explorador (arquivos fictícios) */
       const TREE = [[0, 'c', '7718 - exemplo_y'], [0, 'o', '9035 - exemplo_x'], [1, 'c', 'events'], [1, 'f', '.metadata', 'bi-file-earmark-text', ''], [1, 'h', 'exemplo_x.html', 'bi-code-slash', '#e37933'], [1, 'f', 'jquery.min.js', 'bi-filetype-js', '#e5c07b'], [1, 'f', 'lib_exemplo_x.js', 'bi-filetype-js', '#e5c07b'], [1, 'f', 'MODELO_X.docx', 'bi-filetype-docx', '#4f8fe6'], [1, 'f', 'MODELO_X.xlsx', 'bi-filetype-xlsx', '#3fb950'], [0, 'c', 'datasets'], [0, 'c', 'widgets']];
@@ -2112,12 +2126,12 @@
       const pos = (el, fx = .3, fy = .5) => { const a = dv.getBoundingClientRect(), b = el.getBoundingClientRect(); return [(b.left - a.left + b.width * fx) / K, (b.top - a.top + b.height * fy) / K] };
       const at = (x, y, instant) => { if (instant) { pt.style.transition = 'none' } pt.style.transform = `translate(${x}px,${y}px)`; if (instant) { pt.getBoundingClientRect(); pt.style.transition = '' } cam(x + 170, instant) };
       const go = async (el, k, fx, fy) => { const [x, y] = pos(el, fx, fy); at(x, y); return T(900, k) };
-      const rip = (right) => { const m = pt.style.transform.match(/-?[\d.]+/g) || [0, 0]; const e = document.createElement('div'); e.className = 'rp' + (right ? ' r' : ''); e.style.left = (+m[0] + 3) + 'px'; e.style.top = (+m[1] + 3) + 'px'; dv.appendChild(e); setTimeout(() => e.remove(), 700) };
+      const rip = (right) => { const m = pt.style.transform.match(/-?[\d.]+/g) || [0, 0]; const e = document.createElement('div'); e.className = 'rp' + (right ? ' r' : ''); e.style.left = m[0] + 'px'; e.style.top = m[1] + 'px'; dv.appendChild(e); setTimeout(() => e.remove(), 700) };
       const keys = (arr) => { kk.innerHTML = arr.map(a => `<span>${a}</span>`).join(''); kk.classList.add('on') }; const nokeys = () => kk.classList.remove('on');
       const toast = (msg, extra = '', prog) => { const e = document.createElement('div'); e.className = 't'; e.innerHTML = `<i class="bi bi-info-circle"></i><p>${msg}</p><span class="ic"><i class="bi bi-gear"></i><i class="bi bi-chevron-down"></i><i class="bi bi-x-lg"></i></span>${extra ? `<small style="grid-column:2/-1;margin:-2px 0 0">${extra}</small>` : ''}${prog ? '<div class="pg"></div>' : ''}`; tt.appendChild(e); cam(790); return e };
       const SRC = 'Source: Fluig Tracker - Extensão para Desenvolvimento compartilhado';
       const openMenu = () => { mn.classList.add('on') }, closeMenu = () => { mn.classList.remove('on', 'focus'); $$('.mi', mn).forEach(i => i.classList.remove('sel', 'pulse')) };
-      const scene = s => { dv.dataset.sc = s; if (s !== 'vs') pt.style.opacity = 1; };
+      const scene = s => { dv.dataset.sc = s };
       /* conteúdo do log (mesmo texto que a extensão gera) */
       const mdText = d => `# Histórico de Exportações — Fluig Tracker\n\n> Registro automático gerado pela extensão Fluig Tracker. Cada exportação bem-sucedida acrescenta uma linha à tabela abaixo.\n\n| Responsável | Data | Horário | Processo | Operação |\n|---|---|---|---|---|\n| feliperuediger | ${d.date} | ${d.time} | exemplo_x | Exportação Fluig |\n`;
       const fillGh = () => {
@@ -2130,7 +2144,7 @@
       const mark = i => $$('#dsteps button').forEach((b, j) => b.classList.toggle('on', j === i));
       const base = (i) => {
         closeMenu(); qi.classList.remove('on'); nokeys(); tt.innerHTML = ''; stx.innerHTML = ''; file.classList.remove('sel', 'hov'); $$('.hl').forEach(h => h.classList.remove('on')); $('#fAct').classList.remove('hov'); $$('.rp').forEach(e => e.remove()); mark(i);
-        scene(i < 2 ? 'vs' : i === 2 ? 'gh' : 'file'); $('#ad').textContent = 'github.com/flruedigerlima/processo_x' + (i === 3 ? '/blob/main/activity.md' : ''); at(i < 2 ? 880 : 700, i < 2 ? 490 : 380, true); cam(0, true)
+        scene(i < 2 ? 'vs' : i === 2 ? 'gh' : 'file'); $('#ad').textContent = 'github.com/flruedigerlima/processo_x' + (i === 3 ? '/blob/main/activity.md' : ''); pt.classList.add('on'); at(i < 2 ? 880 : 700, i < 2 ? 490 : 380, true); cam(0, true)
       };
       /* etapas */
       async function s0(k) {
@@ -2165,7 +2179,7 @@
       }
       const S = [s0, s1, s2, s3];
       async function loop(from = 0) { const k = ++run; for (let i = from; i < 4; i++) { mark(i); if (!await S[i](k)) return } if (!await T(1800, k)) return; if (!hold) loop(0) }
-      const final = i => { run++; base(i); stamp(); mark(i); if (i === 0) { toast(`Repositório de Log configurado:<br>${URL_}`, SRC) } if (i === 1) { toast('Formulário exemplo_x exportado com sucesso!', SRC); toast(`Fluig Activity atualizado: Fluig Activity: Export exemplo_x - ${day.date}`, SRC) } if (i === 3) $$('.hl').forEach(h => h.classList.add('on')); pt.style.opacity = 0 };
+      const final = i => { run++; base(i); stamp(); mark(i); if (i === 0) { toast(`Repositório de Log configurado:<br>${URL_}`, SRC) } if (i === 1) { toast('Formulário exemplo_x exportado com sucesso!', SRC); toast(`Fluig Activity atualizado: Fluig Activity: Export exemplo_x - ${day.date}`, SRC) } if (i === 3) $$('.hl').forEach(h => h.classList.add('on')); pt.classList.remove('on') };
       /* controles */
       $$('#dsteps button').forEach((b, i) => b.onclick = () => { hold = true; paused = false; $('#dpause').innerHTML = '<i class="bi bi-pause-fill"></i> Pausar'; if (reduce) return final(i); const k = ++run; mark(i); S[i](k) });
       $('#drep').onclick = () => { hold = false; paused = false; $('#dpause').innerHTML = '<i class="bi bi-pause-fill"></i> Pausar'; reduce ? final(0) : loop(0) };
