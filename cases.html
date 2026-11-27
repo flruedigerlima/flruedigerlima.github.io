@@ -975,6 +975,839 @@
         transform: none
       }
     }
+
+    /* ===== Na prática: VS Code -> GitHub (tema segue o do site) ===== */
+    .demo {
+      --v-bg: #1f1f1f;
+      --v-side: #181818;
+      --v-bd: #2b2b2b;
+      --v-fg: #ccc;
+      --v-mut: #858585;
+      --v-menu: #1f1f1f;
+      --v-mbd: #454545;
+      --v-hov: #04395e;
+      --v-box: #383838;
+      --v-in: #313131;
+      --v-acc: #0078d4;
+      --v-sel: #264f78;
+      --g-bg: #0d1117;
+      --g-sub: #161b22;
+      --g-bd: #30363d;
+      --g-fg: #e6edf3;
+      --g-mut: #8b949e;
+      --g-link: #4493f8;
+      --g-btn: #238636;
+      margin-top: 38px;
+      border: 1px solid var(--ln);
+      border-radius: 24px;
+      background: var(--sf);
+      overflow: hidden
+    }
+
+    [data-theme=light] .demo {
+      --v-bg: #fff;
+      --v-side: #f8f8f8;
+      --v-bd: #e5e5e5;
+      --v-fg: #3b3b3b;
+      --v-mut: #6e6e6e;
+      --v-menu: #fff;
+      --v-mbd: #cecece;
+      --v-hov: #0060c0;
+      --v-box: #dcdcdc;
+      --v-in: #fff;
+      --v-acc: #005fb8;
+      --v-sel: #add6ff;
+      --g-bg: #fff;
+      --g-sub: #f6f8fa;
+      --g-bd: #d0d7de;
+      --g-fg: #1f2328;
+      --g-mut: #59636e;
+      --g-link: #0969da;
+      --g-btn: #1f883d
+    }
+
+    .dbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--ln)
+    }
+
+    .dv-wrap {
+      position: relative;
+      overflow: hidden;
+      background: var(--v-bg)
+    }
+
+    .dv {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 960px;
+      height: 540px;
+      transform-origin: 0 0;
+      font: 13px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--v-fg)
+    }
+
+    .sc {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .5s, visibility .5s
+    }
+
+    .dv[data-sc=vs] .vsc,
+    .dv[data-sc=gh] .ghs,
+    .dv[data-sc=file] .ghs {
+      opacity: 1;
+      visibility: visible
+    }
+
+    .vsc {
+      display: flex;
+      flex-direction: column;
+      background: var(--v-bg)
+    }
+
+    .tb {
+      height: 30px;
+      flex: none;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 0 12px;
+      background: var(--v-side);
+      border-bottom: 1px solid var(--v-bd);
+      font-size: 12px
+    }
+
+    .tb .pl {
+      margin: 0 auto;
+      padding: 2px 60px;
+      border: 1px solid var(--v-bd);
+      border-radius: 6px;
+      color: var(--v-mut);
+      background: var(--v-bg)
+    }
+
+    .bd {
+      flex: 1;
+      display: flex;
+      min-height: 0
+    }
+
+    .ab {
+      width: 48px;
+      flex: none;
+      background: var(--v-side);
+      border-right: 1px solid var(--v-bd);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6px
+    }
+
+    .ab i,
+    .ab img {
+      width: 48px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      color: var(--v-mut);
+      object-fit: contain;
+      padding: 11px
+    }
+
+    .ab i.on {
+      color: var(--v-fg);
+      box-shadow: inset 2px 0 var(--v-fg)
+    }
+
+    .ex {
+      width: 236px;
+      flex: none;
+      background: var(--v-side);
+      border-right: 1px solid var(--v-bd)
+    }
+
+    .ex h5 {
+      margin: 0;
+      padding: 10px 20px;
+      font: 11px "Segoe UI", sans-serif;
+      letter-spacing: .06em;
+      color: var(--v-mut)
+    }
+
+    .r {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      height: 22px;
+      padding-right: 8px;
+      padding-left: calc(var(--d)*14px + 8px);
+      white-space: nowrap;
+      font-size: 13px
+    }
+
+    .r i {
+      font-size: 14px;
+      width: 16px;
+      text-align: center
+    }
+
+    .r .cv {
+      color: var(--v-mut);
+      font-size: 10px;
+      width: 10px
+    }
+
+    .r.sel {
+      background: var(--v-sel);
+      outline: 1px solid var(--v-acc);
+      outline-offset: -1px
+    }
+
+    .r.hov {
+      background: color-mix(in srgb, var(--v-fg) 11%, transparent)
+    }
+
+    .ed {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      background: var(--v-bg);
+      color: var(--v-mut);
+      font-size: 13px
+    }
+
+    .ed>i {
+      font-size: 150px;
+      line-height: 1;
+      opacity: .1;
+      margin-bottom: 22px
+    }
+
+    .ed div {
+      display: flex;
+      justify-content: space-between;
+      width: 250px
+    }
+
+    .ed kbd {
+      background: none;
+      color: var(--v-mut);
+      font: 12px inherit
+    }
+
+    .st {
+      height: 22px;
+      flex: none;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 10px;
+      background: var(--v-side);
+      border-top: 1px solid var(--v-bd);
+      font-size: 12px;
+      color: var(--v-mut)
+    }
+
+    .st .sp {
+      animation: spin 1s linear infinite;
+      display: inline-block
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    .mn {
+      position: absolute;
+      left: 140px;
+      top: 34px;
+      width: 340px;
+      padding: 4px 0;
+      background: var(--v-menu);
+      border: 1px solid var(--v-mbd);
+      border-radius: 8px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .45);
+      opacity: 0;
+      transform: scale(.97);
+      transform-origin: 20px 0;
+      pointer-events: none;
+      transition: .15s;
+      z-index: 10
+    }
+
+    .mn.on {
+      opacity: 1;
+      transform: none
+    }
+
+    .mi {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      height: 24px;
+      align-items: center;
+      margin: 0 4px;
+      padding: 0 20px;
+      border-radius: 5px;
+      transition: opacity .25s
+    }
+
+    .mi small {
+      color: var(--v-mut);
+      font-size: 12px
+    }
+
+    .mi.sel {
+      background: var(--v-box);
+      outline: 1px solid var(--v-mut);
+      outline-offset: -1px
+    }
+
+    .mi.pulse {
+      animation: vp 1.2s ease-out infinite
+    }
+
+    @keyframes vp {
+      0% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--v-acc) 75%, transparent)
+      }
+
+      100% {
+        box-shadow: 0 0 0 11px transparent
+      }
+    }
+
+    .mn.focus .mi:not(.sel) {
+      opacity: .4
+    }
+
+    .sep {
+      height: 1px;
+      margin: 4px 8px;
+      background: var(--v-mbd)
+    }
+
+    .qi {
+      position: absolute;
+      top: 34px;
+      left: 50%;
+      margin-left: -290px;
+      width: 580px;
+      background: var(--v-menu);
+      border: 1px solid var(--v-mbd);
+      border-radius: 8px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .45);
+      opacity: 0;
+      transform: translateY(-8px);
+      pointer-events: none;
+      transition: .2s;
+      z-index: 11
+    }
+
+    .qi.on {
+      opacity: 1;
+      transform: none
+    }
+
+    .qi h6 {
+      margin: 0;
+      padding: 8px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 400;
+      border-bottom: 1px solid var(--v-bd)
+    }
+
+    .qi .in {
+      margin: 8px;
+      padding: 4px 8px;
+      background: var(--v-in);
+      border: 1px solid var(--v-acc);
+      border-radius: 4px;
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap
+    }
+
+    .qi .in .ph {
+      color: var(--v-mut)
+    }
+
+    .qs {
+      background: var(--v-sel)
+    }
+
+    .cr {
+      display: inline-block;
+      width: 1px;
+      height: 16px;
+      background: var(--v-fg);
+      animation: flbl 1s steps(2) infinite
+    }
+
+    .qi .pr {
+      padding: 2px 14px 12px;
+      color: var(--v-mut);
+      font-size: 12.5px;
+      line-height: 1.55
+    }
+
+    .kk {
+      position: absolute;
+      left: 50%;
+      bottom: 44px;
+      display: flex;
+      gap: 6px;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: .2s;
+      z-index: 15
+    }
+
+    .kk.on {
+      opacity: 1
+    }
+
+    .kk span {
+      font: 600 12px ui-monospace, monospace;
+      padding: 5px 11px;
+      border-radius: 6px;
+      background: var(--v-box);
+      color: var(--v-fg);
+      border: 1px solid var(--v-mbd);
+      box-shadow: 0 2px 0 var(--v-mbd)
+    }
+
+    .tt {
+      position: absolute;
+      right: 14px;
+      bottom: 30px;
+      width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 12
+    }
+
+    .t {
+      display: grid;
+      grid-template-columns: 22px 1fr auto;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--v-menu);
+      border: 1px solid var(--v-mbd);
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .4);
+      animation: tin .35s cubic-bezier(.2, .8, .2, 1) both;
+      font-size: 13px
+    }
+
+    @keyframes tin {
+      from {
+        opacity: 0;
+        transform: translateX(30px)
+      }
+    }
+
+    .t>i {
+      color: #3794ff;
+      font-size: 16px
+    }
+
+    .t p {
+      margin: 0;
+      line-height: 1.5;
+      overflow-wrap: anywhere
+    }
+
+    .t small {
+      display: block;
+      margin-top: 9px;
+      color: var(--v-mut);
+      font-size: 11.5px
+    }
+
+    .t .ic {
+      color: var(--v-mut);
+      display: flex;
+      gap: 10px;
+      font-size: 13px
+    }
+
+    .pg {
+      grid-column: 1/-1;
+      height: 2px;
+      margin: -4px 0 0;
+      overflow: hidden
+    }
+
+    .pg::after {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 100%;
+      background: var(--v-acc);
+      animation: pgm 1.1s linear infinite
+    }
+
+    @keyframes pgm {
+      from {
+        margin-left: -30%
+      }
+
+      to {
+        margin-left: 100%
+      }
+    }
+
+    .pt {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 30;
+      pointer-events: none;
+      transition: transform .85s cubic-bezier(.5, 0, .2, 1)
+    }
+
+    .rp {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      margin: -15px 0 0 -15px;
+      border-radius: 50%;
+      border: 2px solid var(--v-acc);
+      z-index: 29;
+      pointer-events: none;
+      animation: rpp .6s ease-out forwards
+    }
+
+    .rp.r {
+      border-color: #ffb347
+    }
+
+    @keyframes rpp {
+      from {
+        transform: scale(.3);
+        opacity: 1
+      }
+
+      to {
+        transform: scale(1.7);
+        opacity: 0
+      }
+    }
+
+    .ghs {
+      display: flex;
+      flex-direction: column;
+      background: var(--g-bg);
+      color: var(--g-fg)
+    }
+
+    .bb {
+      height: 38px;
+      flex: none;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0 14px;
+      background: var(--g-sub);
+      border-bottom: 1px solid var(--g-bd)
+    }
+
+    .bb span {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--g-bd)
+    }
+
+    .bb .ad {
+      flex: 1;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 3px 14px;
+      border-radius: 99px;
+      background: var(--g-bg);
+      border: 1px solid var(--g-bd);
+      font-size: 12px;
+      color: var(--g-mut)
+    }
+
+    .gp {
+      flex: 1;
+      padding: 18px 44px;
+      overflow: hidden
+    }
+
+    .rh {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      margin-bottom: 14px
+    }
+
+    .rh b {
+      font-weight: 600
+    }
+
+    .dv[data-sc=gh] .rv2,
+    .dv[data-sc=file] .rv1 {
+      display: none
+    }
+
+    .gtb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      color: var(--g-mut)
+    }
+
+    .gb {
+      border: 1px solid var(--g-bd);
+      background: var(--g-sub);
+      color: var(--g-fg);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-weight: 600;
+      font-size: 13px
+    }
+
+    .gb.g {
+      background: var(--g-btn);
+      border-color: transparent;
+      color: #fff
+    }
+
+    .gs {
+      margin-left: auto;
+      width: 230px;
+      padding: 4px 10px;
+      border: 1px solid var(--g-bd);
+      border-radius: 6px;
+      color: var(--g-mut)
+    }
+
+    .gbx {
+      border: 1px solid var(--g-bd);
+      border-radius: 6px;
+      overflow: hidden
+    }
+
+    .gc {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: var(--g-sub);
+      font-size: 13px
+    }
+
+    .gc .mu {
+      color: var(--g-mut)
+    }
+
+    .gc .rt {
+      margin-left: auto;
+      display: flex;
+      gap: 16px;
+      color: var(--g-mut);
+      white-space: nowrap
+    }
+
+    .ga {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d9ff52, #0078d4);
+      flex: none
+    }
+
+    .gf {
+      display: grid;
+      grid-template-columns: 250px 1fr 60px;
+      gap: 12px;
+      align-items: center;
+      padding: 8px 16px;
+      border-top: 1px solid var(--g-bd);
+      font-size: 13px
+    }
+
+    .gf .mu {
+      color: var(--g-mut)
+    }
+
+    .gf.hov {
+      background: var(--g-sub)
+    }
+
+    .gf.hov .nm {
+      color: var(--g-link);
+      text-decoration: underline
+    }
+
+    .gf .tm {
+      text-align: right
+    }
+
+    .rd {
+      margin-top: 16px;
+      padding: 14px;
+      text-align: center;
+      color: var(--g-mut);
+      font-size: 13px
+    }
+
+    .rd b {
+      display: block;
+      color: var(--g-fg);
+      font-size: 16px;
+      margin: 6px 0
+    }
+
+    .cr2 {
+      font-size: 15px;
+      margin-bottom: 14px
+    }
+
+    .cr2 span {
+      color: var(--g-link)
+    }
+
+    .gt2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      border-top: 1px solid var(--g-bd);
+      font-size: 12px;
+      color: var(--g-mut)
+    }
+
+    .sg {
+      display: inline-flex;
+      border: 1px solid var(--g-bd);
+      border-radius: 6px;
+      overflow: hidden;
+      font-weight: 600;
+      color: var(--g-fg)
+    }
+
+    .sg span {
+      padding: 4px 12px;
+      border-left: 1px solid var(--g-bd)
+    }
+
+    .sg span:first-child {
+      border: 0;
+      background: var(--g-sub)
+    }
+
+    .gt2 .rt {
+      margin-left: auto;
+      display: flex;
+      gap: 6px
+    }
+
+    .gt2 .rt i {
+      border: 1px solid var(--g-bd);
+      border-radius: 6px;
+      padding: 4px 9px;
+      color: var(--g-fg)
+    }
+
+    .md {
+      border-top: 1px solid var(--g-bd);
+      padding: 22px 44px;
+      font-size: 15px;
+      line-height: 1.6
+    }
+
+    .md h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--g-bd)
+    }
+
+    .md blockquote {
+      margin: 0 0 16px;
+      padding: 0 1em;
+      border-left: 4px solid var(--g-bd);
+      color: var(--g-mut)
+    }
+
+    .md table {
+      border-collapse: collapse
+    }
+
+    .md th,
+    .md td {
+      border: 1px solid var(--g-bd);
+      padding: 6px 13px
+    }
+
+    .md th {
+      font-weight: 600
+    }
+
+    [data-theme=light] .seg button.on {
+      color: #fff
+    }
+
+    .nr .md {
+      padding: 20px 26px
+    }
+
+    .nr .md th,
+    .nr .md td {
+      padding: 6px 9px
+    }
+
+    .nr .md h1 {
+      font-size: 24px
+    }
+
+    @media(max-width:575.98px) {
+      #dsteps {
+        flex-wrap: wrap;
+        border-radius: 18px
+      }
+    }
+
+    .dv {
+      transition: transform .85s cubic-bezier(.5, 0, .2, 1)
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      .demo *,
+      .dv {
+        animation: none !important;
+        transition: none !important
+      }
+    }
   </style>
 </head>
 
@@ -991,7 +1824,7 @@
       bem-sucedida vira, sozinha, um commit enviado ao GitHub. O fim da pergunta "quem mexeu nesse processo por
       último?".</p>
     <div class="acts rv"><a class="btn a" href="#cenas">Ver a história <i class="bi bi-arrow-down"></i></a>
-      <!-- TROQUE pelos links reais -->
+      
       <a class="btn" href="https://github.com/flruedigerlima/fluig-tracker-log" target="_blank" rel="noopener"><i class="bi bi-github"></i>
         Repositório</a>
       <a class="btn" href="https://github.com/fluiggers/fluig-vscode-extension" target="_blank" rel="noopener">Projeto
@@ -1073,6 +1906,107 @@
     </div>
   </section>
 
+
+  <section class="sec" id="pratica">
+    <div class="wrap">
+      <span class="eb rv">// NA PRÁTICA</span>
+      <h2 class="rv">Do clique direito<br>ao <em>activity.md.</em></h2>
+      <p class="intro rv">Uma simulação do fluxo real: configurar o Repositório de Log, exportar um formulário e ver o
+        registro nascer no GitHub.</p>
+      <div class="demo rv" id="demo">
+        <div class="dbar">
+          <div class="seg" id="dsteps" role="group" aria-label="Etapas da demonstração"><button type="button"
+              class="on">1 · Configurar</button><button type="button">2 · Exportar</button><button type="button">3 ·
+              Repositório</button><button type="button">4 · activity.md</button></div>
+          <div class="ctl"><button type="button" class="rb" id="dpause"><i class="bi bi-pause-fill"></i>
+              Pausar</button><button type="button" class="rb" id="drep"><i class="bi bi-arrow-repeat"></i>
+              Reiniciar</button></div>
+        </div>
+        <div class="dv-wrap" id="dwrap">
+          <div class="dv" id="dv" data-sc="vs">
+            <div class="sc vsc">
+              <div class="tb">
+                <span>File</span><span>Edit</span><span>Selection</span><span>View</span><span>Go</span><span>Run</span><span>···</span><span
+                  class="pl">workSpaceTest (Workspace)</span><i class="bi bi-dash-lg"></i><i class="bi bi-square"></i><i
+                  class="bi bi-x-lg"></i></div>
+              <div class="bd">
+                <div class="ab"><i class="bi bi-files on"></i><i class="bi bi-search"></i><i class="bi bi-git"></i><i
+                    class="bi bi-bug"></i><i class="bi bi-grid-1x2"></i><img src="assets/FluigTrackerIcon.png"
+                    alt="Fluig Tracker" onerror="this.outerHTML='<i class=&quot;bi bi-diagram-3&quot;></i>'"></div>
+                <div class="ex">
+                  <h5>EXPLORER</h5>
+                  <div id="tree"></div>
+                </div>
+                <div class="ed"><i class="bi bi-braces"></i>
+                  <div><span>Show All Commands</span><kbd>Ctrl+Shift+P</kbd></div>
+                  <div><span>Open Chat</span><kbd>Ctrl+Alt+I</kbd></div>
+                  <div><span>Start Debugging</span><kbd>F5</kbd></div>
+                </div>
+              </div>
+              <div class="st"><span><i class="bi bi-git"></i> main</span><span id="stx"></span><span
+                  style="margin-left:auto">Fluig Tracker</span></div>
+              <div class="mn" id="mn"></div>
+              <div class="qi" id="qi">
+                <h6>Configurar Repositório de Log</h6>
+                <div class="in" id="qin"></div>
+                <div class="pr">Cole a URL HTTPS/SSH de um repositório Git (por exemplo,
+                  https://github.com/usuario/repositorio.git) ou o caminho de uma pasta que já seja um repositório Git.
+                  Cada exportação será registrada nele. (Press 'Enter' to confirm or 'Escape' to cancel)</div>
+              </div>
+              <div class="tt" id="tt"></div>
+            </div>
+            <div class="sc ghs">
+              <div class="bb"><span></span><span></span><span></span>
+                <div class="ad" id="ad">github.com/flruedigerlima/processo_x</div>
+              </div>
+              <div class="gp">
+                <div class="rv1">
+                  <div class="rh"><i class="bi bi-github"></i><span>flruedigerlima / <b>processo_x</b></span></div>
+                  <div class="gtb"><span class="gb"><i class="bi bi-diagram-2"></i> main ▾</span><span><b
+                        style="color:var(--g-fg)">1</b> Branch</span><span><i class="bi bi-tag"></i> <b
+                        style="color:var(--g-fg)">0</b> Tags</span><span class="gs">Go to file</span><span
+                      class="gb">Add file ▾</span><span class="gb g">&lt;&gt; Code ▾</span></div>
+                  <div class="gbx">
+                    <div class="gc"><span class="ga"></span><b>feliperuediger</b><span class="mu cm1"></span><span
+                        class="rt"><span class="hh"></span><span><i class="bi bi-clock-history"></i> <b
+                            style="color:var(--g-fg)">1 Commit</b></span></span></div>
+                    <div class="gf"><span><i class="bi bi-file-earmark"></i> .gitattributes</span><span
+                        class="mu cm1"></span><span class="mu tm">now</span></div>
+                    <div class="gf" id="fAct"><span class="nm"><i class="bi bi-file-earmark"></i>
+                        activity.md</span><span class="mu cm1"></span><span class="mu tm">now</span></div>
+                  </div>
+                  <div class="gbx rd"><i class="bi bi-book"></i><b>Add a README</b>Help people interested in this
+                    repository understand your project.</div>
+                </div>
+                <div class="rv2">
+                  <div class="cr2"><span>processo_x</span> / <b>activity.md</b></div>
+                  <div class="gbx">
+                    <div class="gc"><span class="ga"></span><b>feliperuediger</b><span class="mu cm1"></span><span
+                        class="rt"><span class="hh"></span><span><i class="bi bi-clock-history"></i> <b
+                            style="color:var(--g-fg)">History</b></span></span></div>
+                    <div class="gt2">
+                      <div class="sg"><span>Preview</span><span>Code</span><span>Blame</span></div><span
+                        id="fmeta"></span>
+                      <div class="rt"><i class="bi bi-copy"></i><i class="bi bi-download"></i><i
+                          class="bi bi-pencil"></i></div>
+                    </div>
+                    <div class="md" id="mdv"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="kk" id="kk"></div>
+            <svg class="pt" id="pt" width="22" height="26" viewBox="0 0 22 26">
+              <path d="M2 1v20l5.5-5 4 8.5 3-1.5-4-8.2H19z" fill="#fff" stroke="#111" stroke-width="1.6"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="fine">Simulação ilustrativa: arquivos fictícios; o tema acompanha o do site.</p>
+    </div>
+  </section>
+
   <section class="sec">
     <div class="wrap">
       <span class="eb rv">// O CASE</span>
@@ -1094,8 +2028,8 @@
             Distribuição em pacote <code>.vsix</code>, instalável pelo próprio VS Code.</p>
         </div>
       </div>
-      <p class="note rv">Limitação atual: o pacote usa um caminho local específico para o repositório de atividade e
-        precisa ser adaptado em outros ambientes.</p>
+      <p class="note rv">Cada pessoa configura o próprio destino pelo botão <b>Configurar Repositório de Log</b>: basta
+        colar a URL do GitHub. A extensão clona uma vez e reutiliza essa cópia.</p>
     </div>
   </section>
 
@@ -1152,6 +2086,93 @@
         $('#replay').onclick = () => { hold = false; reduce ? final(0) : loop() };
         if (!reduce) new IntersectionObserver(([e]) => { if (e.isIntersecting) { if (!hold) loop() } else run++ }, { threshold: .35 }).observe($('#stage'));
       })();
+  </script>
+
+  <script>
+    (() => {
+      const D = document.querySelector('#demo'); if (!D) return;
+      const $ = (s, r = D) => r.querySelector(s), $$ = (s, r = D) => [...r.querySelectorAll(s)];
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const dv = $('#dv'), wrap = $('#dwrap'), pt = $('#pt'), mn = $('#mn'), qi = $('#qi'), qin = $('#qin'), tt = $('#tt'), kk = $('#kk'), stx = $('#stx');
+      let K = 1, NARROW = false, camX = 0;
+      const cam = (x, instant) => { if (!NARROW) return; const vw = wrap.clientWidth / K; camX = Math.max(0, Math.min(960 - vw, x - vw / 2)); if (instant) dv.style.transition = 'none'; dv.style.transform = `scale(${K}) translate(${-camX}px,0)`; if (instant) { dv.getBoundingClientRect(); dv.style.transition = '' } };
+      const fit = () => { NARROW = wrap.clientWidth < 700; K = NARROW ? Math.max(.5, Math.min(.7, wrap.clientWidth / 545)) : wrap.clientWidth / 960; dv.classList.toggle('nr', NARROW); wrap.style.height = 540 * K + 'px'; dv.style.transition = 'none'; dv.style.transform = `scale(${K}) translate(${-(NARROW ? camX : 0)}px,0)`; dv.getBoundingClientRect(); dv.style.transition = '' }; new ResizeObserver(fit).observe(wrap); fit();
+      const URL_ = 'https://github.com/flruedigerlima/processo_x.git';
+      /* explorador (arquivos fictícios) */
+      const TREE = [[0, 'c', '7718 - exemplo_y'], [0, 'o', '9035 - exemplo_x'], [1, 'c', 'events'], [1, 'f', '.metadata', 'bi-file-earmark-text', ''], [1, 'h', 'exemplo_x.html', 'bi-code-slash', '#e37933'], [1, 'f', 'jquery.min.js', 'bi-filetype-js', '#e5c07b'], [1, 'f', 'lib_exemplo_x.js', 'bi-filetype-js', '#e5c07b'], [1, 'f', 'MODELO_X.docx', 'bi-filetype-docx', '#4f8fe6'], [1, 'f', 'MODELO_X.xlsx', 'bi-filetype-xlsx', '#3fb950'], [0, 'c', 'datasets'], [0, 'c', 'widgets']];
+      $('#tree').innerHTML = `<div class="r" style="--d:0"><i class="bi bi-chevron-down cv"></i><b style="font-size:11px">WORKSPACETEST</b></div>` + TREE.map(([d, t, n, ic, co]) => `<div class="r${t === 'h' ? ' file' : ''}" style="--d:${d + 1}">${t === 'f' || t === 'h' ? `<span style="width:10px"></span><i class="bi ${ic}" style="color:${co || 'var(--v-mut)'}"></i>` : `<i class="bi bi-chevron-${t === 'o' ? 'down' : 'right'} cv"></i><i class="bi bi-folder2${t === 'o' ? '-open' : ''}" style="color:var(--v-mut)"></i>`}${n}</div>`).join('');
+      const file = $('.r.file');
+      /* menu de contexto (extensão) */
+      const MENU = [['Open to the Side', 'Ctrl+Enter'], ['Reveal in File Explorer', 'Shift+Alt+R'], '-', ['Novo Dataset', 'Ctrl+F10'], ['Importar Dataset', ''], '-', ['Novo Formulário', 'Ctrl+F11'], ['Novo Evento de Formulário', 'Ctrl+F12'], ['Importar Vários Formulários', ''], ['Importar Formulário', ''], ['Exportar Formulário', 'Ctrl+F9', 'exp'], ['Configurar Repositório de Log', '', 'cfg'], '-', ['Cut', 'Ctrl+X'], ['Copy', 'Ctrl+C'], '-', ['Rename...', 'F2'], ['Delete', 'Del']];
+      mn.innerHTML = MENU.map(m => m === '-' ? '<div class="sep"></div>' : `<div class="mi" ${m[2] ? `data-k="${m[2]}"` : ''}><span>${m[0]}</span><small>${m[1]}</small></div>`).join('');
+      const cfg = $('[data-k=cfg]', mn), exp = $('[data-k=exp]', mn);
+      /* utilidades */
+      let run = 0, hold = false, paused = false, day;
+      const T = (ms, k) => new Promise(r => setTimeout(() => r(k === run), ms));
+      const pos = (el, fx = .3, fy = .5) => { const a = dv.getBoundingClientRect(), b = el.getBoundingClientRect(); return [(b.left - a.left + b.width * fx) / K, (b.top - a.top + b.height * fy) / K] };
+      const at = (x, y, instant) => { if (instant) { pt.style.transition = 'none' } pt.style.transform = `translate(${x}px,${y}px)`; if (instant) { pt.getBoundingClientRect(); pt.style.transition = '' } cam(x + 170, instant) };
+      const go = async (el, k, fx, fy) => { const [x, y] = pos(el, fx, fy); at(x, y); return T(900, k) };
+      const rip = (right) => { const m = pt.style.transform.match(/-?[\d.]+/g) || [0, 0]; const e = document.createElement('div'); e.className = 'rp' + (right ? ' r' : ''); e.style.left = (+m[0] + 3) + 'px'; e.style.top = (+m[1] + 3) + 'px'; dv.appendChild(e); setTimeout(() => e.remove(), 700) };
+      const keys = (arr) => { kk.innerHTML = arr.map(a => `<span>${a}</span>`).join(''); kk.classList.add('on') }; const nokeys = () => kk.classList.remove('on');
+      const toast = (msg, extra = '', prog) => { const e = document.createElement('div'); e.className = 't'; e.innerHTML = `<i class="bi bi-info-circle"></i><p>${msg}</p><span class="ic"><i class="bi bi-gear"></i><i class="bi bi-chevron-down"></i><i class="bi bi-x-lg"></i></span>${extra ? `<small style="grid-column:2/-1;margin:-2px 0 0">${extra}</small>` : ''}${prog ? '<div class="pg"></div>' : ''}`; tt.appendChild(e); cam(790); return e };
+      const SRC = 'Source: Fluig Tracker - Extensão para Desenvolvimento compartilhado';
+      const openMenu = () => { mn.classList.add('on') }, closeMenu = () => { mn.classList.remove('on', 'focus'); $$('.mi', mn).forEach(i => i.classList.remove('sel', 'pulse')) };
+      const scene = s => { dv.dataset.sc = s; if (s !== 'vs') pt.style.opacity = 1; };
+      /* conteúdo do log (mesmo texto que a extensão gera) */
+      const mdText = d => `# Histórico de Exportações — Fluig Tracker\n\n> Registro automático gerado pela extensão Fluig Tracker. Cada exportação bem-sucedida acrescenta uma linha à tabela abaixo.\n\n| Responsável | Data | Horário | Processo | Operação |\n|---|---|---|---|---|\n| feliperuediger | ${d.date} | ${d.time} | exemplo_x | Exportação Fluig |\n`;
+      const fillGh = () => {
+        const m = mdText(day), lines = m.split('\n').length - 1, loc = m.split('\n').filter(l => l.trim()).length, b = new TextEncoder().encode(m).length;
+        $$('.cm1').forEach(e => e.textContent = `Fluig Activity: Export exemplo_x - ${day.date}`); $$('.hh').forEach(e => e.textContent = 'a3cbb33 · now');
+        $('#fmeta').textContent = `${lines} lines (${loc} loc) · ${b} Bytes`;
+        $('#mdv').innerHTML = `<h1>Histórico de Exportações — Fluig Tracker</h1><blockquote>Registro automático gerado pela extensão Fluig Tracker. Cada exportação bem-sucedida acrescenta uma linha à tabela abaixo.</blockquote><table><tr><th>Responsável</th><th>Data</th><th>Horário</th><th>Processo</th><th>Operação</th></tr><tr><td><span class="hl">feliperuediger</span></td><td><span class="hl">${day.date}</span></td><td>${day.time}</td><td><span class="hl">exemplo_x</span></td><td>Exportação Fluig</td></tr></table>`
+      };
+      const stamp = () => { const d = new Date(), p = n => String(n).padStart(2, '0'); day = { date: `${p(d.getDate())}/${p(d.getMonth() + 1)}/${d.getFullYear()}`, time: `${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}` }; fillGh() };
+      const mark = i => $$('#dsteps button').forEach((b, j) => b.classList.toggle('on', j === i));
+      const base = (i) => {
+        closeMenu(); qi.classList.remove('on'); nokeys(); tt.innerHTML = ''; stx.innerHTML = ''; file.classList.remove('sel', 'hov'); $$('.hl').forEach(h => h.classList.remove('on')); $('#fAct').classList.remove('hov'); $$('.rp').forEach(e => e.remove()); mark(i);
+        scene(i < 2 ? 'vs' : i === 2 ? 'gh' : 'file'); $('#ad').textContent = 'github.com/flruedigerlima/processo_x' + (i === 3 ? '/blob/main/activity.md' : ''); at(i < 2 ? 880 : 700, i < 2 ? 490 : 380, true); cam(0, true)
+      };
+      /* etapas */
+      async function s0(k) {
+        base(0); stamp();
+        if (!await go(file, k, .4, .5)) return; file.classList.add('hov'); if (!await T(500, k)) return;
+        rip(1); file.classList.remove('hov'); file.classList.add('sel'); openMenu(); if (!await T(700, k)) return;
+        mn.classList.add('focus'); cfg.classList.add('sel', 'pulse'); if (!await go(cfg, k, .3, .5)) return; if (!await T(1100, k)) return;
+        rip(); closeMenu(); file.classList.remove('sel'); if (!await T(300, k)) return;
+        qi.classList.add('on'); cam(480); qin.innerHTML = '<span class="ph">https://github.com/usuario/fluig-activity-log.git</span><span class="cr"></span>'; if (!await T(1200, k)) return;
+        keys(['Ctrl', 'V']); if (!await T(500, k)) return; qin.innerHTML = `<span class="qs">${URL_}</span>`; if (!await T(900, k)) return;
+        nokeys(); keys(['Enter']); if (!await T(550, k)) return; nokeys(); qi.classList.remove('on');
+        const p = toast('Fluig Tracker: configurando o Repositório de Log…', '', 1); if (!await T(1300, k)) return; p.remove();
+        toast(`Repositório de Log configurado:<br>${URL_}`, SRC); return T(2600, k)
+      }
+      async function s1(k) {
+        base(1); stamp();
+        if (!await go(file, k, .4, .5)) return; file.classList.add('hov'); if (!await T(450, k)) return;
+        rip(1); file.classList.remove('hov'); file.classList.add('sel'); openMenu(); if (!await T(700, k)) return;
+        mn.classList.add('focus'); exp.classList.add('sel', 'pulse'); if (!await go(exp, k, .3, .5)) return; if (!await T(900, k)) return;
+        rip(); closeMenu(); stx.innerHTML = '<i class="bi bi-arrow-repeat sp"></i> Exportando exemplo_x…'; if (!await T(1400, k)) return; stx.innerHTML = ''; file.classList.remove('sel');
+        toast('Formulário exemplo_x exportado com sucesso!', SRC); if (!await T(1000, k)) return;
+        toast(`Fluig Activity atualizado: Fluig Activity: Export exemplo_x - ${day.date}`, SRC); return T(2800, k)
+      }
+      async function s2(k) {
+        base(2); stamp(); if (!await T(1200, k)) return;
+        const r = $('#fAct'); if (!await go(r, k, .1, .5)) return; r.classList.add('hov'); if (!await T(700, k)) return; rip(); return T(500, k)
+      }
+      async function s3(k) {
+        base(3); stamp(); if (!await T(1300, k)) return;
+        for (const h of $$('.hl')) { const [x, y] = pos(h, .6, .7); at(x, y); if (!await T(900, k)) return; h.classList.add('on'); if (!await T(500, k)) return }
+        cam(335); return T(3200, k)
+      }
+      const S = [s0, s1, s2, s3];
+      async function loop(from = 0) { const k = ++run; for (let i = from; i < 4; i++) { mark(i); if (!await S[i](k)) return } if (!await T(1800, k)) return; if (!hold) loop(0) }
+      const final = i => { run++; base(i); stamp(); mark(i); if (i === 0) { toast(`Repositório de Log configurado:<br>${URL_}`, SRC) } if (i === 1) { toast('Formulário exemplo_x exportado com sucesso!', SRC); toast(`Fluig Activity atualizado: Fluig Activity: Export exemplo_x - ${day.date}`, SRC) } if (i === 3) $$('.hl').forEach(h => h.classList.add('on')); pt.style.opacity = 0 };
+      /* controles */
+      $$('#dsteps button').forEach((b, i) => b.onclick = () => { hold = true; paused = false; $('#dpause').innerHTML = '<i class="bi bi-pause-fill"></i> Pausar'; if (reduce) return final(i); const k = ++run; mark(i); S[i](k) });
+      $('#drep').onclick = () => { hold = false; paused = false; $('#dpause').innerHTML = '<i class="bi bi-pause-fill"></i> Pausar'; reduce ? final(0) : loop(0) };
+      $('#dpause').onclick = () => { paused = !paused; hold = paused; if (paused) { run++; $('#dpause').innerHTML = '<i class="bi bi-play-fill"></i> Reproduzir' } else { $('#dpause').innerHTML = '<i class="bi bi-pause-fill"></i> Pausar'; loop(0) } };
+      base(0); stamp(); if (reduce) final(3);
+      else new IntersectionObserver(([e]) => { if (e.isIntersecting) { if (!hold) loop(0) } else run++ }, { threshold: .35 }).observe(D);
+    })();
   </script>
 </body>
 
